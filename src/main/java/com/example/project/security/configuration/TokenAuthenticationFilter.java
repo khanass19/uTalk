@@ -49,8 +49,6 @@ public class TokenAuthenticationFilter extends GenericFilterBean {
     @Value("${token.uri.param:#{null}}")
     private String accessToken;
 
-    @Value("${external.login.pattern}")
-    private String loginUrl;
 
     @Autowired
     private TokenTool tokenTools;
@@ -63,7 +61,7 @@ public class TokenAuthenticationFilter extends GenericFilterBean {
         System.out.println("error in if where external - start of all");
 
         List<String> urlPatterns = Arrays.asList(externalUrlPattern, imagesUrlPattern, fontAwesomeUrlPattern,
-                cssUrlPattern, jsUrlPattern, loginUrl);
+                cssUrlPattern, jsUrlPattern);
         AtomicBoolean whetherNeedToExitMethod = new AtomicBoolean(false);
         urlPatterns.forEach(x -> {
             if (x != null && !x.isEmpty()) {
@@ -132,7 +130,11 @@ public class TokenAuthenticationFilter extends GenericFilterBean {
 
     private void setErrorResponse(ServletResponse response, String msg) throws IOException {
         ((HttpServletResponse) response).setHeader("WWW-Authenticate", "Bearer realm=\"Service\", error=\"invalid_grant\", error_description=\"" + msg + ".\"");
-        ((HttpServletResponse) response).sendError(HttpServletResponse.SC_UNAUTHORIZED, "Access denied");
+       try {
+           ((HttpServletResponse) response).sendError(HttpServletResponse.SC_UNAUTHORIZED, "Access denied");
+       } catch (IllegalStateException e){
+           System.out.println("IllegalStateException was catched !!!");
+       }
     }
 
     private void traceSession(ServletRequest request) {

@@ -7,28 +7,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <link href="https://fonts.googleapis.com/css?family=Delius+Unicase:700" rel="stylesheet">
-   <link href="https://fonts.googleapis.com/css?family=Kalam:700" rel="stylesheet">
-    <link rel="stylesheet" href="../static/css/Profile.css">
-    <link href="../static/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="/css/Planner.css">
+    <link href="/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Audiowide|Passion+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Glegoo|Teko" rel="stylesheet">
-    <link rel="stylesheet" href="../static/css/addNote.css">
-    <link href="https://fonts.googleapis.com/css?family=Hi+Melody" rel="stylesheet">
-    <script src="https://use.fontawesome.com/07b0ce5d10.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,600" rel="stylesheet">
+    <link rel="stylesheet" href="/css/addNote.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    
-      <link href="https://fonts.googleapis.com/css?family=Coming+Soon" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Caveat+Brush" rel="stylesheet">
+    <script src="https://use.fontawesome.com/07b0ce5d10.js"></script>
+ <link href="https://fonts.googleapis.com/css?family=Coming+Soon" rel="stylesheet">
 </head>
 
 <body>
 
     <div class="bg">
-    <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
             <a class="navbar-brand"><img id = "emblem" class="emblem" src="/images/horseshoe.png"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -36,7 +32,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active" style="padding-right:10px;">
-                        <a class="nav-link" style="font-size:25px; font-weight:bolder" id="titleHeader"></a>
+                        <a class="nav-link" style="font-size:25px; font-weight:bolder">PLANS HELPER</a>
+                    </li>
+                    <li class="nav-item" style="font-size:25px; font-weight: normal, padding-right:10px;">
+                        <a href="/public/#" class="nav-link" data-toggle="modal" data-target="#t_and_c_m2">INFORMATION</a>
                     </li>
                     <li class="nav-item " style=font-size:25px font-weight: normal>
                 </ul>
@@ -55,165 +54,260 @@
                 </form>
                 <div class="social-container">
                     <ul class="social-icons">
-                        <li><a href="Friends.html" data-toggle="tooltip" title="Messanger"><i class="fa fa-envelope"></i></a></li>
-                        <li><a href="../index.html" data-toggle="tooltip" title="Log out"><i class="fa fa-sign-out"></i></a></li>
+                        <li><a href="/public/Friends.html" data-toggle="tooltip" title="Messanger"><i class="fa fa-envelope"></i></a></li>
+                        <li><a href="/public/page" data-toggle="tooltip" title="Log out"><i class="fa fa-sign-out"></i></a></li>
                     </ul>
                 </div>
                 <div class="admin-bar" style="font-size: 22px;">
                     <nav class="nav nav-inline">
-                        <a id="emailHeader" class="nav-link" style="color: darkgrey; font-style: italic; font-size: 14px"></a><img src="/images/user.gif" id="miniPhoto" class="img-fluid rounded-circle" style="width: 40px; height: 35px; padding-left: 2%">
+                        <a id="emailHeader" class="nav-link" style="color: darkgrey; font-style: italic; font-size: 14px"></a><img id="miniPhoto" src="/images/user.gif" class="img-fluid rounded-circle" id="photoHeader" style="width: 40px; height: 35px; padding-left: 2%">
                     </nav>
                 </div>
             </div>
         </nav>
         <div class="modal fade" id="t_and_c_m2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
-                <div class="modal-content" style="margin-top: 10%;" id="modal_content">
+                <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title" id="myModalLabel">Find other user: </h4>
+                        <h4 class="modal-title" id="myModalLabel">uTalk in details:</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                     </div>
                     <div class="modal-body">
-                        <div style="display: flex; margin-bottom: 2%;">
-                        <input type="text" placeholder="Type name/surname..." id="inputBtn">  
-                        <button id="findBtn">Find</button>   
+                        <div style="display: flex; flex-direction:column; height: 500px;">
+                            <p><img src="/images/MainLogo.png" alt="main_logo" style="width: 40%; height: 45%; margin-left: 30%;">
+                                <div>
+                                    uT (uTalk; Ukrainian: Ютолк, meaning YouTellSmbdSmth) is a Ukrainian-based online social networking service. It is available only in the English language, thougth it was created for native speakers of Ukraine. It is especially popular among English-speaking users. uTalk allows users to message each other privately, share and tag images, audio and video, and to make new friends. It is based in Lviv, Ukraine.
+                                </div>
                         </div>
-                        <ul id="notebook_ul">
-                           
-                        </ul>
-                
+                        <div class="modal-footer" style="margin-top: -10%;">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div id="flex1Content">
+        <div id="contentFlex">
             <div>
                 <nav class="main-menu">
                     <ul>
                         <li>
-                            <a href="profile.html">
+                            <a href="/public/profile.html">
                     <i class="fa fa-home fa-2x"></i>
                         <span class="nav-text">Profile</span>
                 </a>
                         </li>
                         <li class="has-subnav">
-                            <a href="Friends.html">
+                            <a href="/public/Friends.html">
                     <i class="fa fa-envelope fa-2x"></i>
                         <span class="nav-text">Messanger</span>
                 </a>
                         </li>
                         <li class="has-subnav">
-                            <a href="Settings_Of_Page.html">
-                     <i class="fa fa-gears fa-2x"></i>
+                            <a href="/public/Settings_Of_Page.html">
+                    <i class="fa fa-gears fa-2x"></i>
                     <span class="nav-text">Settings of page</span>
                 </a>
                         </li>
                         <li class="has-subnav">
-                            <a href="SavedFiles.html">
+                            <a href="/public/SavedFiles.html">
                    <i class="fa fa-folder-open fa-2x"></i>
                     <span class="nav-text">Saved Files</span>
                 </a>
                         </li>
                         <li>
-                            <a href="PhotoPage.html">
+                            <a href="/public/PhotoPage.html">
                     <i class="fa fa-camera-retro fa-2x"></i>
                     <span class="nav-text">Photos</span>
                 </a>
                         </li>
                         <li>
-                            <a href="Planner.html">
+                            <a href="/public/Planner.html" style="color: white">
                    <i class="fa fa-table fa-2x"></i>
                     <span class="nav-text">Plans-Helper</span>
                 </a>
                         </li>
                         <li>
-                            <a href="VisitGalleryOfFriend.html">
+                            <a href="/public/VisitGalleryOfFriend.html">
                     <i class="fa fa-photo fa-2x"></i>
                     <span class="nav-text">Gallery</span>
                 </a>
                         </li>
                         <li>
-                            <a href="Documentation.html">
+                            <a href="/public/Documentation.html">
                    <i class="fa fa-info fa-2x"></i>
                     <span class="nav-text">Documentation</span>
                 </a>
                         </li>
                     </ul>
                     <li>
-                        <a href="../index.html">
+                        <a href="/public/page">
                          <i class="fa fa-power-off fa-2x"></i>
                         <span class="nav-text" style="color: red; font-weight: bold ">Logout</span>
                     </a>
                     </li>
                 </nav>
             </div>
+           
+                <div id="taskManager">
+                    <div id="left" class="pannelLeft" style="display:flow-root;">
+
+                        <section id="task">
+                            <h1 class="text1">Set new task</h1>
+                            <input style="padding-left: 10px; font-size: 22px;" type=text id ="taskField" placeholder="Enter your task for today..." autofocus>
+                        </section>
+
+                        <section id="timer">
+                            <h1 class="text1">Set date deadline</h1>
+                            <input style="padding-left: 10px; font-size: 22px;" type="date" id = "date" required>
+                        </section>
+
+                        <section id="timer">
+                            <h1 class="text1">Set time deadline</h1>
+                            <input style="padding-left: 10px; font-size: 22px;" id="time" type="time" required>
+                        </section>
+
+                        <section id="start">
+                            <button id="addBtn" style="width: 100%; height: 100%; background-color: #16DE0F; border-radius: 5px; cursor: pointer;"><h1 class="text1";>Add into list</h1></button>
+                        </section>
+                    </div>
+                <div id="right" class="pannelRight">
+                        <aside id="list" style="width: 100%; margin-left: 1%;">
+                            <h4 id="listTitle" style="margin-top: 1%;">List of your challenges<a id = "removeAllBtn" class="btn icon-btn btn-danger" style="cursor: pointer;"><i class="fa fa-trash fa-2x"></i><span class="glyphicon btn-glyphicon glyphicon-trash img-circle text-danger"></span><h6 style="font-weight: bold;">Clear All</h6></a></h4>
+                           
+                            <table id="listOfTasks" style="margin-top: 2%;">
+                               <thead>
+                                <tr>
+                                    <th>Task</th>
+                                    <th>TillDate</th>
+                                    <th>TillTime</th>
+                                </tr>
+                            </thead>
+                            <tbody id="listOfTasksTbody"> 
+                            </tbody>
+                        </table>    
+                                 <h4 id="textBackgroundTable" style="color: #707374; margin-top: 18%;">You are able to fill in this area your tasks</h4>    
+                        </aside>
+                </div>
+        </div>
+    
+            <script>
+                
+                var planSpecRequest = {
+                    id: localStorage.getItem("idCurrentUser")
+                }
+
+                $.ajax({
+                    url: "http://localhost:8080/plan/select",
+                    type: "POST",
+                     headers: {
+                        'Authorize' : "Bearer " + localStorage.getItem('token'),
+                     },
+                    contentType: "application/json",
+                    "dataType": "json",
+                    'data': JSON.stringify(planSpecRequest),
+                    success: function(data) {  
+                        for (var i = 0; i < data.length; i++) {
+                            $("#listOfTasksTbody").append("<tr><td>" + data[i].task + "</td>" + "<td>" + data[i].date + "</td><td>" + data[i].time + "</td></tr>");
+                        }
+                    },
+                    error: function(error) {
+                        console.log(error);
+                    }
+                });
+
+                
+                addBtn.onclick = function() {
+                     $("#textBackgroundTable").hide();
+                    
+                    var plan = {
+                        task: $("#taskField").val(),
+                        date: $("#date").val(),
+                        time: $("#time").val(),
+                        idUser: localStorage.getItem("idCurrentUser")
+                    }
+
+                    $.ajax({
+                        'url': "http://localhost:8080/plan/save",
+                        'type': "POST",
+                        headers: {
+                            'Authorize' : "Bearer " + localStorage.getItem('token'),
+                        },
+                        'contentType': "application/json",
+                        "dataType": "json",
+                        'data': JSON.stringify(plan),
+                        success: function(data) {
+                            console.log(data);
+                        },
+                        'eror': function(error) {
+                            alert("ERROR");
+                        }
+                    });
+
+                var planSpecRequest = {
+                    "id": localStorage.getItem("idCurrentUser")
+                }
+
+                $.ajax({
+                    url: "http://localhost:8080/plan/select",
+                    type: "POST",
+                    headers: {
+                        'Authorize' : "Bearer " + localStorage.getItem('token'),
+                    },
+                    contentType: "application/json",
+                    "dataType": "json",
+                    'data': JSON.stringify(planSpecRequest),
+                    success: function(data) {
+                        $("td").remove();
+                        for (var i = 0; i < data.length; i++) {
+                            $("#listOfTasksTbody").append("<tr><td>" + data[i].task + "</td>" + "<td>" + data[i].date + "</td><td>" + data[i].time + "</td></tr>");
+                        }
+                    },
+                    error: function(error) {
+                        console.log(error);
+                    }
+                });
+
+            }
             
-            <div id="sidebarFlex">
-            <div class="sidebar">
-                <div class="sidebar-top">
-                    <img class="profile-image" id="MainPhoto" src="/images/user.gif">
-                    <div class="profile-basic">
-                        <h3 id="FirstNameAndLastName" class="name"></h3>
-                        <h6 id="Age" class="name"></h6>
-                    </div>
-                </div>
-                <div class="profile-info ">
-                    <textarea class="shadow" id="fewWords" cols="52" rows="5" disabled style="overflow:hidden"></textarea>
-                  </div>
-                  
-                <div class="profile-info">
-                    <p class="key">Contact : </p>
-                    <p class="value" id="number"></p>
-                </div>
-                <div class="profile-info" >
-                    <p class="key">Email : </p>
-                    <p class="value2" id="email"></p>
-                </div>
-                <div class="profile-info">
-                    <p class="key">Address : </p>
-                    <p class="value" id="countryCity">
-                    </p>
-                </div>
-                <div class="profile-info" style="margin-left: 5%;">
-                    <div id="social">
-                        <a class="facebookBtn smGlobalBtn" id="facebook"></a>
-                        <a class="twitterBtn smGlobalBtn" id="twitter"></a>
-                        <a class="linkedinBtn smGlobalBtn" id="linkedin"></a>
-                        <a class="vkBtn smGlobalBtn" id="vk"></a>
-                    </div>
-                </div>
-                <a href="FriendGallery.html"><button id="buttonGallery">GALLERY<i class="fa fa-camera" style="margin-bottom: 3%;"></i></button></a>
-            </div>
+                removeAllBtn.onclick = function(){
+                    var removeAllTasksByIdUser = {
+                        "id": localStorage.getItem("idCurrentUser")
+                    }
+                    
+                    $.ajax({
+                        'url': "http://localhost:8080/plan/delete",
+                        'type': "PUT",
+                         headers: {
+                             'Authorize' : "Bearer " + localStorage.getItem('token'),
+                        },
+                        'contentType': "application/json",
+                        "dataType": "json",
+                        'data': JSON.stringify(removeAllTasksByIdUser),
+                        success: function(data) {
+                            alert("remove");
+                        },
+                        'eror': function(error) {
+                            alert("ERROR");
+                        }
+                    });
+ 
+                     $("td").remove();
+                }
+            
+            
+            
+            
+            
+            </script>
+            
+            
+            
+            
 
-
-            <div class="content">
-                <div class="work-experience">
-                    <h1 class="nameW"> Work Experience</h1>
-                    <div class="info">
-                        <p class="sub-heading" style="width: 90%;" id="place1"></p>
-                        <p class="duration" style="width: 90%;" id="time1"></p>
-                        <p class="describe" style="width: 90%;" id="few1"></p>
-                    </div>
-                    <div class="info">
-                        <p class="sub-heading" style="width: 90%;" id="place2"></p>
-                        <p class="duration" style="width: 90%;" id="time2"></p>
-                        <p class="describe" style="width: 90%;" id="few2"></p>
-                    </div>
-                </div>
-                <div class="education">
-                    <h1 class="nameW">Education</h1>
-                    <div class="info">
-                        <p class="sub-heading" style="width: 90%;" id="splace1"></p>
-                        <p class="duration" style="width: 90%;" id="stime1"></p>
-                        <p class="describe" style="width: 90%;" id="sfew1"></p>
-                    </div>
-                </div>
-                </div>
-            </div>
         </div>
     </div>
-    
-   <footer class="myfooter">
+
+    <footer class="myfooter">
     <div class="container">
         <div class="row">
             <div class="col-sm-3">
@@ -229,9 +323,9 @@
             <div id="blocksOfFooter" class="col-sm-3">
                 <h4 class="title-widget">My Account</h4>
                 <span class=" social acount-icon">          
-                        <a href="profile.html" ><i class="icoFacebook fa fa-user-circle-o" aria-hidden=true></i>My Profile</a>
-                        <a href="Friends.html" ><i class="fa fa-users" aria-hidden="true"></i>My friends</a>
-                        <a href="Settings_Of_Page.html"><i class="fa fa-cogs" aria-hidden="true"></i>Settings</a>     
+                        <a href="/public/profile.html" ><i class="icoFacebook fa fa-user-circle-o" aria-hidden=true></i>My Profile</a>
+                        <a href="/public/Friends.html" ><i class="fa fa-users" aria-hidden="true"></i>My friends</a>
+                        <a href="/public/Settings_Of_Page.html"><i class="fa fa-cogs" aria-hidden="true"></i>Settings</a>
                         
                         <script>function openInNewTab(url) {
                             var win = window.open(url, '_blank');
@@ -246,8 +340,8 @@
                 <div id="addBlockForFooter" class="col-xs-12 col-md-12">
 
                     <div class="container" id="footerBtnFlex" style="margin-top: 5%; margin-right: 10%; color: #fff">
-                        <button id="searchBtn" type="button" style="box-shadow: 0 0 10px rgba(0,0,0,0.5); border-radius: 5px;"><a class="btn icon-btn btn-success" class=" col-md-6 col-xl-3"><i class="fa fa-plus-square fa-2x"></i></a></button>
-                        <button onclick="func6()" id="removeAllBtn" type="button" style="box-shadow: 0 0 10px rgba(0,0,0,0.5); border-radius: 5px;"><a onclick="func6_1()"  class="btn icon-btn btn-danger" class=" col-md-6" ><i class="fa fa-trash fa-2x"></i></a></button>
+                        <button id="searchBtn" type="button" style="box-shadow: 0 0 10px rgba(0,0,0,0.5); border-radius: 5px; cursor: pointer;"><a class="btn icon-btn btn-success" class=" col-md-6 col-xl-3"><i class="fa fa-plus-square fa-2x"></i></a></button>
+                        <button id="removeAllBtn02" type="button" style="box-shadow: 0 0 10px rgba(0,0,0,0.5); border-radius: 5px; margin-left: 3%; cursor: pointer;"><a class="btn icon-btn btn-danger" class=" col-md-6" ><i class="fa fa-trash fa-2x"></i></a></button>
                     </div>
                     <div>
                         <input id="input" style="width: 100%; box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */" placeholder="New link" type="text" class="form-control">
@@ -268,34 +362,37 @@
     </div>
 </footer>
 
-
-    <script>
-        
-     ///////////////////////////////////////////////////////////DISPLAY-INFO ++ //////////////////////////////////////////////////////////        
-        var idFriend = localStorage.getItem("idFriendPageVisit");
+<script>
     
-        var str1 = "http://localhost:8080/information/public/select/";
-            var str2 = idFriend;
+    /////////////////////////////////////////////////////////////////// GET HEADER EMAIL ++ //////////////////////////////////////////////             
+                 var userNow = localStorage.getItem("idCurrentUser");
+         
+                var str1 = "http://localhost:8080/user/get/by/";
+                var str2 = userNow;
                 var str3 = str1.concat(str2);
-        
-         $.ajax({
-            url: str3,
-            type: "POST",
-            'contentType' : "application/json",
-            success: function(data) {
-                $("#countryCity").append(data.city + " " + data.country),
-                $("#fewWords").append(data.fewWords),
-                $("#Age").append(data.age + " years old, " + data.gender),
-                $("#number").append(data.number)
-            },
-            error: function(error) {
-                console.log(error);
-            }
-        });
-        
-///////////////////////////////////////////////////////// MAIN PHOTO //////////////////////////////////////////////////////////////////
+                
+                $.ajax({
+                    url: str3,
+                    type: "GET",
+                    headers: {
+                        'Authorize' : "Bearer " + localStorage.getItem('token')
+                    },
+                    contentType: "application/json",
+                    success: function(data) {
+                        $("#emailHeader").append(data.email);
+                        localStorage.setItem("myName",data.firstName);
+                        localStorage.setItem("mySurname",data.lastName);
+                       
+                    },
+                    error: function(error) {
+                        console.log(error);
+                    }
+                });
+    
+      /////////////////////////////////////////////////////////DISPLAY MAIN PHOTO ////////////////////////////////////////////////////////////
+                               
                                 var avatarIdRequest = {
-                                     id : localStorage.getItem("idFriendPageVisit")
+                                     id : localStorage.getItem("idCurrentUser")
                                 }
                                  
                                  $.ajax({
@@ -312,7 +409,6 @@
                                             var str1PhotoSrc = "img/";
                                             var str2PhotoSrc = data.photo;
                                             var str3PhotoSrc = str1PhotoSrc.concat(str2PhotoSrc);
-                                            $("#MainPhoto").attr("src", str3PhotoSrc);
                                             $("#miniPhoto").attr("src", str3PhotoSrc);
                                         }
                                     },
@@ -320,83 +416,7 @@
                                         console.log(error);
                                     }
                                 });
-     
-///////////////////////////////////////////////////////////DISPLAY-LINK ++ /////////////////////////////////////////////////////////////////     
-          var linkIdRequest = {
-              "id": localStorage.getItem("idFriendPageVisit")
-         }
-         
-          $.ajax({
-            url: "http://localhost:8080/link/selectOne",
-            type: "POST",
-            headers: {
-                Authorize : "Bearer " + localStorage.getItem('token')
-            },
-                'contentType' : "application/json",
-            "dataType": "json",
-            'data': JSON.stringify(linkIdRequest),
-            success: function(data) {
-                $("#facebook").attr("href", data.facebookLink);
-                $("#twitter").attr("href", data.twitterLink);
-                $("#linkedin").attr("href", data.linkedinLink);
-                $("#vk").attr("href", data.vkLink);      
-            }, 
-            error: function(error) {
-                console.log(error);
-            }
-        });
-         
-///////////////////////////////////////////////////////////DISPLAY-WORK ++ /////////////////////////////////////////////////////////////////    
-          var workIdRequest = {
-              "id": localStorage.getItem("idFriendPageVisit")
-         }
-         
-          $.ajax({
-            url: "http://localhost:8080/work/select",
-            type: "POST",
-            headers: {
-                'Authorize' : "Bearer " + localStorage.getItem('token')
-            },
-            'contentType' : "application/json",
-            "dataType": "json",
-            'data': JSON.stringify(workIdRequest),
-            success: function(data) {
-                $("#place1").append(data.place1);
-                $("#time1").append(data.time1);
-                $("#few1").append(data.few1);
-                $("#place2").append(data.place2);
-                $("#time2").append(data.time2);
-                $("#few2").append(data.few2);      
-            },
-            error: function(error) {
-                console.log(error);
-            }
-        });
-       
-///////////////////////////////////////////////////////////DISPLAY-STUDY ++ ////////////////////////////////////////////////////////////////         
-         var studyIdRequest = {
-              "id": localStorage.getItem("idFriendPageVisit")
-         }
-         
-         $.ajax({
-            url: "http://localhost:8080/study/select",
-            type: "POST",
-            headers: {
-                'Authorize' : "Bearer " + localStorage.getItem('token')
-            },
-            'contentType' : "application/json",
-            "dataType": "json",
-            'data': JSON.stringify(studyIdRequest),
-            success: function(data) {
-                $("#splace1").append(data.place1);
-                $("#stime1").append(data.time1);
-                $("#sfew1").append(data.few1);
-            },
-            error: function(error) {
-                console.log(error);
-            }
-        });
- 
+  
       /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////DISPLAY-NOTE ++ ///////////////////////////////////////////////////////
      /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -571,7 +591,7 @@
 
     
 
-   $("#removeAllBtn").click(function(){
+   $("#removeAllBtn02").click(function(){
        var idUser = localStorage.getItem("idCurrentUser");
        
        var deleteAll = {
@@ -593,105 +613,12 @@
        $(".aLink").remove();
     });
      
-     
-///////////////////////////////////////////////////////////DISPLAY-USER-REGISTER ++ ////////////////////////////////////////////////////////
     
-    var urlFirstPart = "http://localhost:8080/user/get/by/";
-        var urlSecondPart = localStorage.getItem("idFriendPageVisit");
-        var urlFull = urlFirstPart.concat(urlSecondPart);
     
-    $.ajax({
-        url: urlFull,
-        type: "GET",
-        headers: {
-            'Authorize' : "Bearer " + localStorage.getItem('token'),
-        },
-        contentType : "application/json",
-        dataType: "json",
-        success: function(data) {
-            $("#FirstNameAndLastName").append("<h2 style='font-weight:bold'>" + data.lastName + " " + data.firstName + "</h2>");
-            $("#email").append(data.email);
-            $("#titleHeader").append(data.firstName + "'s Page");
-        },
-        'eror': function(error) {
-            alert("ERROR");
-        }
-    });
+</script>
 
-           var urlFirstPart = "http://localhost:8080/user/get/by/";
-        var urlSecondPart = localStorage.getItem("idCurrentUser");
-        var urlFull = urlFirstPart.concat(urlSecondPart);
-    
-    $.ajax({
-        url: urlFull,
-        type: "GET",
-        headers: {
-            'Authorize' : "Bearer " + localStorage.getItem('token'),
-        },
-        contentType : "application/json",
-        dataType: "json",
-        success: function(data) {
-            $("#emailHeader").append(data.email);
-        },
-        'eror': function(error) {
-            alert("ERROR");
-        }
-    });
 
-        var avatarIdRequest = {
-             id : localStorage.getItem("idCurrentUser")
-        }
 
-         $.ajax({
-            url: "http://localhost:8080/avatar/select",
-            type: "POST",
-            headers: {
-                'Authorize' : "Bearer " + localStorage.getItem('token')
-            },
-            'contentType' : "application/json",
-            "dataType": "json",
-            'data': JSON.stringify(avatarIdRequest),
-            success: function(data) {
-                if(data != null){
-                    var str1PhotoSrc = "img/";
-                    var str2PhotoSrc = data.photo;
-                    var str3PhotoSrc = str1PhotoSrc.concat(str2PhotoSrc);
-                    $("#miniPhoto").attr("src", str3PhotoSrc);
-                }
-            },
-            error: function(error) {
-                console.log(error);
-            }
-        });
-        
-    </script>
-    
-    
-    
-    
-    
-    
-    </script>
- 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <script>
         function setDate() {
             // get current date

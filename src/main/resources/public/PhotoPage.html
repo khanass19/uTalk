@@ -2,25 +2,22 @@
 <html lang="en">
 
 <head>
-    <title>Documentation</title>
+    <title>PhotoPage</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="../static/css/Documentation.css">
-    <link href="../static/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="/css/PhotoPage.css">
+    <link href="/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Audiowide|Passion+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Glegoo|Teko" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Bowlby+One" rel="stylesheet">
-    <meta name="Keywords" content="scc-cpio-1sqqf">
-    <link rel="stylesheet" href="../static/css/addNote.css">
-
-    <link href="https://fonts.googleapis.com/css?family=Coming+Soon" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+    <link rel="stylesheet" href="/css/addNote.css">
     <script src="https://use.fontawesome.com/07b0ce5d10.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <link href="https://fonts.googleapis.com/css?family=Coming+Soon" rel="stylesheet">
 </head>
 
 <body>
@@ -34,7 +31,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active" style="padding-right:10px;">
-                        <a class="nav-link" style="font-size:25px; font-weight:bolder">DOCUMENTATION</a>
+                        <a class="nav-link" style="font-size:25px; font-weight:bolder">NEW PHOTO</a>
                     </li>
                     <li class="nav-item" style="font-size:25px; font-weight: normal, padding-right:10px;">
                         <a href="#" class="nav-link" data-toggle="modal" data-target="#t_and_c_m2">INFORMATION</a>
@@ -57,12 +54,12 @@
                 <div class="social-container">
                     <ul class="social-icons">
                         <li><a href="Friends.html" data-toggle="tooltip" title="Messanger"><i class="fa fa-envelope"></i></a></li>
-                        <li><a href="../index.html" data-toggle="tooltip" title="Log out"><i class="fa fa-sign-out"></i></a></li>
+                        <li><a href="/public/index.html" data-toggle="tooltip" title="Log out"><i class="fa fa-sign-out"></i></a></li>
                     </ul>
                 </div>
                 <div class="admin-bar" style="font-size: 22px;">
                      <nav class="nav nav-inline">
-                        <a id="emailHeader" class="nav-link" style="color: darkgrey; font-style: italic; font-size: 14px"></a><img src = "/images/user.gif" id="miniPhoto" class="img-fluid rounded-circle" style="width: 40px; height: 35px; padding-left: 2%">
+                        <a id="emailHeader" class="nav-link" style="color: darkgrey; font-style: italic; font-size: 14px"></a><img id="miniPhoto" src="/images/user.gif" class="img-fluid rounded-circle" id="photoHeader" style="width: 40px; height: 35px; padding-left: 2%">
                     </nav>
                 </div>
             </div>
@@ -89,7 +86,7 @@
             </div>
         </div>
 
-        <div style="display: flex; margin-top:2%;">
+        <div style="display: flex; margin-top: 2%;">
             <div>
 
                 <nav class="main-menu">
@@ -119,7 +116,7 @@
                 </a>
                         </li>
                         <li>
-                            <a href="PhotoPage.html">
+                            <a href="PhotoPage.html" style="color: white">
                     <i class="fa fa-camera-retro fa-2x"></i>
                     <span class="nav-text">Photos</span>
                 </a>
@@ -137,31 +134,47 @@
                 </a>
                         </li>
                         <li>
-                            <a href="Documentation.html" style="color: white">
+                            <a href="Documentation.html">
                    <i class="fa fa-info fa-2x"></i>
                     <span class="nav-text">Documentation</span>
                 </a>
                         </li>
                     </ul>
                     <li>
-                        <a href="../index.html">
+                        <a href="/public/index.html">
                          <i class="fa fa-power-off fa-2x"></i>
                         <span class="nav-text" style="color: red; font-weight: bold ">Logout</span>
                     </a>
                     </li>
                 </nav>
             </div>
-            <div id="centralArea" style="height: 450px; width: 40%px; margin-left: 2%; ">
-                <div class="content">
-                    <img src="/images/settings.png" alt="" style="width: 5%; height: 5%; margin: auto; margin-bottom: 2%">
-                    <div class="random"><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span>
-                        <span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0 </span><span class="nbr ltr">0 </span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span></div>
-                </div>
-                <script src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js'></script>
-                <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
+            <div class="file-upload" style="margin-top: 5%; padding-bottom: 5%">
+
+                <div class="image-upload-wrap">
+                    <input class="file-upload-input" id="photoInput" type='file' onchange="readURL(this);" accept="image/*" />
+                    <div class="drag-text">
+                        <h3>Drag and drop a file or select add Image</h3>
+                    </div>
+                </div>
+
+                <div id="blockInput">
+                    <form>
+                        <input id="textInput" class="inputRecording" required='' type='text' style="text-align: center" placeholder=" Recording under the photo">
+                    </form>
+                </div>
+
+                <button onclick="getFile(document.getElementById('photoInput'))" class="file-upload-btn" type="button" id="addBtn" onclick="getFile(document.getElementById('findBtn'))">Add Image</button>
+
+                <div class="file-upload-content">
+                    <img class="file-upload-image" src="#" alt="your image" />
+                    <div class="image-title-wrap">
+                        <button type="button" onclick="removeUpload()" class="remove-image">Remove <span class="image-title">Uploaded Image</span></button>
+                    </div>
+                </div>
             </div>
         </div>
+
     </div>
 
    <footer class="myfooter">
@@ -182,7 +195,7 @@
                 <span class=" social acount-icon">          
                         <a href="profile.html" ><i class="icoFacebook fa fa-user-circle-o" aria-hidden=true></i>My Profile</a>
                         <a href="Friends.html" ><i class="fa fa-users" aria-hidden="true"></i>My friends</a>
-                        <a href="Settings_Of_Page.html"><i class="fa fa-cogs" aria-hidden="true"></i>Settings</a>     
+                        <a href="Settings_Of_Page.html"><i class="fa fa-cogs" aria-hidden="true"></i>Settings</a>
                         
                         <script>function openInNewTab(url) {
                             var win = window.open(url, '_blank');
@@ -219,9 +232,11 @@
     </div>
 </footer>
 
+
+
 <script>
     
-     /////////////////////////////////////////////////////////////////// GET HEADER EMAIL ++ //////////////////////////////////////////////             
+    /////////////////////////////////////////////////////////////////// GET HEADER EMAIL ++ //////////////////////////////////////////////             
                  var userNow = localStorage.getItem("idCurrentUser");
          
                 var str1 = "http://localhost:8080/user/get/by/";
@@ -472,53 +487,82 @@
      
     
     
+                                    function getFile(object) {
+                                        var file = object.files[0];
+                                        var reader = new FileReader();
+                                        reader.readAsDataURL(file);
+                                        reader.onload = function() {
+                                            console.log("uploading...");
+                                            var readFile = reader.result;
+                                            console.log(readFile);
+
+                                            var photoRequest = {
+                                                url: readFile,
+                                                foot: $("#textInput").val(),
+                                                idUser: localStorage.getItem("idCurrentUser")
+                                            }
+
+                                            $.ajax({
+                                                'url': "http://localhost:8080/photo",
+                                                'type': "POST",
+                                                headers: {
+                                                    'Authorize' : "Bearer " + localStorage.getItem('token')
+                                                },
+                                                'contentType' : "application/json",
+                                                "dataType": "json",
+                                                'data': JSON.stringify(photoRequest),
+                                                'success': function(data) {
+                                                    console.log(data);
+                                                    alert("+");
+                                                },
+                                                'eror': function(error) {
+                                                    alert("ERROR");
+                                                }
+                                            });
+                                        }
+                                    }
+    
+    
+    
     </script>
+    
+    
 
 
 
+    <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script>
-        $(document).ready(function() {
+        function readURL(input) {
+            if (input.files && input.files[0]) {
 
-            var $randomnbr = $('.nbr');
-            var $timer = 10;
-            var $it;
-            var $data = 0;
-            var index;
-            var change;
-            var letters = ["T", "h", "i", "s", " ", "p", "a", "g", "e", " ", "i", "s", " ", "s", "t", "i", "l", "l", " ", "u", "n", "d", "e", "r", " ", "d", "e", "v", "e", "l", "o", "p", "m", "e", "n", "t", " ", "!", "!", "!"];
+                var reader = new FileReader();
 
-            $randomnbr.each(function() {
+                reader.onload = function(e) {
+                    $('.image-upload-wrap').hide();
 
-                change = Math.round(Math.random() * 100);
-                $(this).attr('data-change', change);
+                    $('.file-upload-image').attr('src', e.target.result);
+                    $('.file-upload-content').show();
 
-            });
+                    $('.image-title').html(input.files[0].name);
+                };
 
-            function random() {
-                return Math.round(Math.random() * 9);
-            };
+                reader.readAsDataURL(input.files[0]);
 
-            function select() {
-                return Math.round(Math.random() * $randomnbr.length + 1);
-            };
+            } else {
+                removeUpload();
+            }
+        }
 
-            function value() {
-                $('.nbr:nth-child(' + select() + ')').html('' + random() + '');
-                $('.nbr:nth-child(' + select() + ')').attr('data-number', $data);
-                $data++;
-
-                $randomnbr.each(function() {
-                    if (parseInt($(this).attr('data-number')) > parseInt($(this).attr('data-change'))) {
-                        index = $('.ltr').index(this);
-                        $(this).html(letters[index]);
-                        $(this).removeClass('nbr');
-                    }
-                });
-
-            };
-
-            $it = setInterval(value, $timer);
-
+        function removeUpload() {
+            $('.file-upload-input').replaceWith($('.file-upload-input').clone());
+            $('.file-upload-content').hide();
+            $('.image-upload-wrap').show();
+        }
+        $('.image-upload-wrap').bind('dragover', function() {
+            $('.image-upload-wrap').addClass('image-dropping');
+        });
+        $('.image-upload-wrap').bind('dragleave', function() {
+            $('.image-upload-wrap').removeClass('image-dropping');
         });
     </script>
 
@@ -557,24 +601,6 @@
     </script>
 
     <script>
-        function myFunction() {
-            var inputText = document.getElementById("input").value;
-            var inputText2 = document.getElementById("input2").value;
-            var element = document.createElement("a");
-            element.setAttribute('href', inputText);
-            element.appendChild(document.createTextNode(inputText2));
-            document.getElementById('category').appendChild(element);
-        }
-
-        function clearThis(target) {
-            if (target.value != null) {
-                target.value = "";
-            }
-        }
-    </script>
-
-
-    <script>
         try {
             Typekit.load({
                 async: true
@@ -604,6 +630,7 @@
             }
         });
     </script>
+
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>

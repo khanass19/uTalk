@@ -56,7 +56,7 @@ public class PhotoServiceImpl implements PhotoService{
     }
 
     private  void saveFile(MultipartFile file) throws IOException {
-        File pathToFolder = new File("C:\\Users\\User\\Desktop\\rep\\final\\img");
+        File pathToFolder = new File("/img");
         if(!pathToFolder.exists()){
             pathToFolder.mkdirs();
         }

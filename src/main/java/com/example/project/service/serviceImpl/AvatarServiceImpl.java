@@ -32,7 +32,7 @@ public class AvatarServiceImpl implements AvatarService{
     private PhotoService photoService;
 
     private void saveFile(MultipartFile file) throws IOException {
-        final String PATH_TO_FILE = "C:\\Users\\User\\Desktop\\rep\\final\\img";
+        final String PATH_TO_FILE = "..\\src\\main\\resources\\public\\img";
         File pathToFolder = new File(PATH_TO_FILE);
         if(!pathToFolder.exists()){
             pathToFolder.mkdirs();
@@ -66,8 +66,7 @@ public class AvatarServiceImpl implements AvatarService{
 
     @Override
     public AvatarResponse findAvatarForOneUser(AvatarIdRequest avatarIdRequest) {
-        System.out.println("Getting image from DB");
-        System.out.println("Image was found successfully");
+
         return new AvatarResponse(avatarRepository.findAv(avatarIdRequest.getId()));
     }
 

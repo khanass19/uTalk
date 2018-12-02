@@ -2,33 +2,31 @@
 <html lang="en">
 
 <head>
-    <title>Profile</title>
+    <title>Documentation</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <link href="https://fonts.googleapis.com/css?family=Delius+Unicase:700" rel="stylesheet">
-   <link href="https://fonts.googleapis.com/css?family=Kalam:700" rel="stylesheet">
-    <link rel="stylesheet" href="../static/css/Profile.css">
-    <link href="../static/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="/css/Documentation.css">
+    <link href="/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="/css/font-awesome.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Audiowide|Passion+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Glegoo|Teko" rel="stylesheet">
-    <link rel="stylesheet" href="../static/css/addNote.css">
-    <link href="https://fonts.googleapis.com/css?family=Hi+Melody" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bowlby+One" rel="stylesheet">
+    <meta name="Keywords" content="scc-cpio-1sqqf">
+    <link rel="stylesheet" href="/css/addNote.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Coming+Soon" rel="stylesheet">
     <script src="https://use.fontawesome.com/07b0ce5d10.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    
-      <link href="https://fonts.googleapis.com/css?family=Coming+Soon" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Caveat+Brush" rel="stylesheet">
+
 </head>
 
 <body>
 
     <div class="bg">
-    <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
             <a class="navbar-brand"><img id = "emblem" class="emblem" src="/images/horseshoe.png"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -36,10 +34,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active" style="padding-right:10px;">
-                        <a class="nav-link" style="font-size:25px; font-weight:bolder">PROFILE PAGE</a>
+                        <a class="nav-link" style="font-size:25px; font-weight:bolder">DOCUMENTATION</a>
                     </li>
                     <li class="nav-item" style="font-size:25px; font-weight: normal, padding-right:10px;">
-                        <a href="#" class="nav-link" data-toggle="modal" data-target="#t_and_c_m2">VIEW SOMEONE'S PROFILE</a>
+                        <a href="/public#" class="nav-link" data-toggle="modal" data-target="#t_and_c_m2">INFORMATION</a>
                     </li>
                     <li class="nav-item " style=font-size:25px font-weight: normal>
                 </ul>
@@ -59,229 +57,113 @@
                 <div class="social-container">
                     <ul class="social-icons">
                         <li><a href="Friends.html" data-toggle="tooltip" title="Messanger"><i class="fa fa-envelope"></i></a></li>
-                        <li><a href="../index.html" data-toggle="tooltip" title="Log out"><i class="fa fa-sign-out"></i></a></li>
+                        <li><a href="/public/index.html" data-toggle="tooltip" title="Log out"><i class="fa fa-sign-out"></i></a></li>
                     </ul>
                 </div>
                 <div class="admin-bar" style="font-size: 22px;">
-                    <nav class="nav nav-inline">
-                        <a id="emailHeader" class="nav-link" style="color: darkgrey; font-style: italic; font-size: 14px"></a><img src="/images/user.gif" id="miniPhoto" class="img-fluid rounded-circle" style="width: 40px; height: 35px; padding-left: 2%">
+                     <nav class="nav nav-inline">
+                        <a id="emailHeader" class="nav-link" style="color: darkgrey; font-style: italic; font-size: 14px"></a><img src = "/images/user.gif" id="miniPhoto" class="img-fluid rounded-circle" style="width: 40px; height: 35px; padding-left: 2%">
                     </nav>
                 </div>
             </div>
         </nav>
         <div class="modal fade" id="t_and_c_m2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
-                <div class="modal-content" style="margin-top: 10%;" id="modal_content">
+                <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title" id="myModalLabel">Find other user: </h4>
+                        <h4 class="modal-title" id="myModalLabel">uTalk in details:</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                     </div>
                     <div class="modal-body">
-                        <div style="display: flex; margin-bottom: 2%;">
-                        <input type="text" id="fieldForSearch" placeholder="Firstname lastname: " style="border-radius: 10px; width: 100%;">  
-                        <button id="findBtn">Find</button>   
+                        <div style="display: flex; flex-direction:column; height: 500px;">
+                            <p><img src="/images/MainLogo.png" alt="main_logo" style="width: 40%; height: 45%; margin-left: 30%;">
+                                <div>
+                                    uT (uTalk; Ukrainian: Ютолк, meaning YouTellSmbdSmth) is a Ukrainian-based online social networking service. It is available only in the English language, thougth it was created for native speakers of Ukraine. It is especially popular among English-speaking users. uTalk allows users to message each other privately, share and tag images, audio and video, and to make new friends. It is based in Lviv, Ukraine.
+                                </div>
                         </div>
-                        <ul id="notebook_ul" onmousedown="whichElement(event)">
-                           
-                        </ul>
-                
+                        <div class="modal-footer" style="margin-top: -10%;">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                        </div>
                     </div>
-                    
-                    <script>
-                    
-                    findBtn.onclick = function(){
-                        $(".li").remove();
-                        
-                        var str1 = $("#fieldForSearch").val();
-                        var strFirstName = str1.split(" ")[0];
-                        var strLastName = str1.split(" ")[1];
-                        
-                        var otherUser = {
-                            firstName : strFirstName,
-                            lastName : strLastName
-                        }
-    
-                    var str1 = "http://localhost:8080/user/filter";
-                
-                       $.ajax({
-                            url: str1,
-                            type: "POST",
-                             headers: {
-                                    'Authorize' : "Bearer " + localStorage.getItem('token')
-                                },
-                            'contentType' : "application/json",
-                            "dataType": "json",
-                            'data': JSON.stringify(otherUser),
-                            success: function(data) {
-                                if(data.length != 0){
-                                    for(var i = 0; i < data.length; i++){
-                                        $("#notebook_ul").append("<li class='li' id='li' ng-repeat='notebook in notebooks | filter:query | orderBy: orderList'>" + data[i].firstName + " " + data[i].lastName + "</li>");
-                                        localStorage.setItem("idFriendPageVisit", data[i].id); 
-                                    }
-                                } else {
-                                    alert("User was not found ! Check firstname or lastname, please !");
-                                }
-                                
-                            },
-                            error: function(error) {
-                                console.log(error);
-                                alert("User was not found ! Check firstname or lastname, please !");
-                                }
-                        });
-                        
-                    }
-                    
-                    function whichElement(e) {
-                
-
-                        var targ;
-                        if (!e) {
-                            var e = window.event;
-                        }
-                        if (e.target) {
-                            targ=e.target;
-                        } else if (e.srcElement) {
-                            targ=e.srcElement;
-                        }
-                        var tname;
-                        tname = targ.tagName;
-                    
-                            if(targ.id  == "li"){
-                                 window.open('onesProfile.html','_self',false);
-                            }
-                        
-                    }
-                    </script>
                 </div>
             </div>
         </div>
-        <div id="flex1Content">
+
+        <div style="display: flex; margin-top:2%;">
             <div>
+
                 <nav class="main-menu">
                     <ul>
                         <li>
-                            <a href="profile.html" style="color: white">
+                            <a href="/public/profile.html">
                     <i class="fa fa-home fa-2x"></i>
                         <span class="nav-text">Profile</span>
                 </a>
                         </li>
                         <li class="has-subnav">
-                            <a href="Friends.html">
+                            <a href="/public/Friends.html">
                     <i class="fa fa-envelope fa-2x"></i>
                         <span class="nav-text">Messanger</span>
                 </a>
                         </li>
                         <li class="has-subnav">
-                            <a href="Settings_Of_Page.html">
+                            <a href="/public/Settings_Of_Page.html">
                      <i class="fa fa-gears fa-2x"></i>
                     <span class="nav-text">Settings of page</span>
                 </a>
                         </li>
                         <li class="has-subnav">
-                            <a href="SavedFiles.html">
+                            <a href="/public/SavedFiles.html">
                    <i class="fa fa-folder-open fa-2x"></i>
                     <span class="nav-text">Saved Files</span>
                 </a>
                         </li>
                         <li>
-                            <a href="PhotoPage.html">
+                            <a href="/public/PhotoPage.html">
                     <i class="fa fa-camera-retro fa-2x"></i>
                     <span class="nav-text">Photos</span>
                 </a>
                         </li>
                         <li>
-                            <a href="Planner.html">
+                            <a href="/public/Planner.html">
                    <i class="fa fa-table fa-2x"></i>
                     <span class="nav-text">Plans-Helper</span>
                 </a>
                         </li>
                         <li>
-                            <a href="VisitGalleryOfFriend.html">
+                            <a href="/public/VisitGalleryOfFriend.html">
                     <i class="fa fa-photo fa-2x"></i>
                     <span class="nav-text">Gallery</span>
                 </a>
                         </li>
                         <li>
-                            <a href="Documentation.html">
+                            <a href="/public/Documentation.html" style="color: white">
                    <i class="fa fa-info fa-2x"></i>
                     <span class="nav-text">Documentation</span>
                 </a>
                         </li>
                     </ul>
                     <li>
-                        <a href="../index.html">
+                        <a href="/public/page">
                          <i class="fa fa-power-off fa-2x"></i>
-                        <span class="nav-text" style="color: red; font-weight: bold">Logout</span>
+                        <span class="nav-text" style="color: red; font-weight: bold ">Logout</span>
                     </a>
                     </li>
                 </nav>
             </div>
-            
-            <div id="sidebarFlex">
-            <div class="sidebar">
-                <div class="sidebar-top">
-                    <img class="profile-image" id="MainPhoto" src="/images/user.gif">
-                    <div class="profile-basic">
-                        <h3 id="FirstNameAndLastName" class="name"></h3>
-                        <h6 id="Age" class="name"></h6>
-                    </div>
+            <div id="centralArea" style="height: 450px; width: 40%px; margin-left: 2%; ">
+                <div class="content">
+                    <img src="/images/settings.png" alt="" style="width: 5%; height: 5%; margin: auto; margin-bottom: 2%">
+                    <div class="random"><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span>
+                        <span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0 </span><span class="nbr ltr">0 </span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span><span class="nbr ltr">0</span></div>
                 </div>
-                <div class="profile-info ">
-                    <textarea class="shadow" id="fewWords" cols="52" rows="5" disabled style="overflow:hidden"></textarea>
-                  </div>
-                  
-                <div class="profile-info">
-                    <p class="key">Contact : </p>
-                    <p class="value" id="number"></p>
-                </div>
-                <div class="profile-info" >
-                    <p class="key">Email : </p>
-                    <p class="value2" id="email"></p>
-                </div>
-                <div class="profile-info">
-                    <p class="key">Address : </p>
-                    <p class="value" id="countryCity">
-                    </p>
-                </div>
-                <div class="profile-info" style="margin-left: 5%;">
-                    <div id="social">
-                        <a class="facebookBtn smGlobalBtn" id="facebook"></a>
-                        <a class="twitterBtn smGlobalBtn" id="twitter"></a>
-                        <a class="linkedinBtn smGlobalBtn" id="linkedin"></a>
-                        <a class="vkBtn smGlobalBtn" id="vk"></a>
-                    </div>
-                </div>
-                <a href="VisitGalleryOfFriend.html"><button id="buttonGallery">GALLERY<i class="fa fa-camera" style="margin-bottom: 3%;"></i></button></a>
-            </div>
+                <script src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js'></script>
+                <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
-
-            <div class="content">
-                <div class="work-experience">
-                    <h1 class="nameW"> Work Experience</h1>
-                    <div class="info">
-                        <p class="sub-heading" style="width: 90%;" id="place1"></p>
-                        <p class="duration" style="width: 90%;" id="time1"></p>
-                        <p class="describe" style="width: 90%;" id="few1"></p>
-                    </div>
-                    <div class="info">
-                        <p class="sub-heading" style="width: 90%;" id="place2"></p>
-                        <p class="duration" style="width: 90%;" id="time2"></p>
-                        <p class="describe" style="width: 90%;" id="few2"></p>
-                    </div>
-                </div>
-                <div class="education">
-                    <h1 class="nameW">Education</h1>
-                    <div class="info">
-                        <p class="sub-heading" style="width: 90%;" id="splace1"></p>
-                        <p class="duration" style="width: 90%;" id="stime1"></p>
-                        <p class="describe" style="width: 90%;" id="sfew1"></p>
-                    </div>
-                </div>
-                </div>
             </div>
         </div>
     </div>
-    
+
    <footer class="myfooter">
     <div class="container">
         <div class="row">
@@ -298,9 +180,9 @@
             <div id="blocksOfFooter" class="col-sm-3">
                 <h4 class="title-widget">My Account</h4>
                 <span class=" social acount-icon">          
-                        <a href="profile.html" ><i class="icoFacebook fa fa-user-circle-o" aria-hidden=true></i>My Profile</a>
+                        <a href="/public/profile.html" ><i class="icoFacebook fa fa-user-circle-o" aria-hidden=true></i>My Profile</a>
                         <a href="Friends.html" ><i class="fa fa-users" aria-hidden="true"></i>My friends</a>
-                        <a href="Settings_Of_Page.html"><i class="fa fa-cogs" aria-hidden="true"></i>Settings</a>     
+                        <a href="/public/Settings_Of_Page.html"><i class="fa fa-cogs" aria-hidden="true"></i>Settings</a>
                         
                         <script>function openInNewTab(url) {
                             var win = window.open(url, '_blank');
@@ -337,10 +219,34 @@
     </div>
 </footer>
 
-
+<script>
     
-  <script>
-    /////////////////////////////////////////////////////////DISPLAY MAIN PHOTO ////////////////////////////////////////////////////////////
+     /////////////////////////////////////////////////////////////////// GET HEADER EMAIL ++ //////////////////////////////////////////////             
+                 var userNow = localStorage.getItem("idCurrentUser");
+         
+                var str1 = "http://localhost:8080/user/get/by/";
+                var str2 = userNow;
+                var str3 = str1.concat(str2);
+                
+                $.ajax({
+                    url: str3,
+                    type: "GET",
+                    headers: {
+                        'Authorize' : "Bearer " + localStorage.getItem('token')
+                    },
+                    contentType: "application/json",
+                    success: function(data) {
+                        $("#emailHeader").append(data.email);
+                        localStorage.setItem("myName",data.firstName);
+                        localStorage.setItem("mySurname",data.lastName);
+                       
+                    },
+                    error: function(error) {
+                        console.log(error);
+                    }
+                });
+    
+      /////////////////////////////////////////////////////////DISPLAY MAIN PHOTO ////////////////////////////////////////////////////////////
                                
                                 var avatarIdRequest = {
                                      id : localStorage.getItem("idCurrentUser")
@@ -360,7 +266,6 @@
                                             var str1PhotoSrc = "img/";
                                             var str2PhotoSrc = data.photo;
                                             var str3PhotoSrc = str1PhotoSrc.concat(str2PhotoSrc);
-                                            $("#MainPhoto").attr("src", str3PhotoSrc);
                                             $("#miniPhoto").attr("src", str3PhotoSrc);
                                         }
                                     },
@@ -368,105 +273,7 @@
                                         console.log(error);
                                     }
                                 });
-      
-    ///////////////////////////////////////////////////////////DISPLAY-INFO ++ /////////////////////////////////////////////////////////////        
-        var iduser = localStorage.getItem("idCurrentUser");
     
-        var str1 = "http://localhost:8080/information/public/select/";
-            var str2 = iduser;
-                var str3 = str1.concat(str2);
-        
-         $.ajax({
-            url: str3,
-            type: "POST",
-            'contentType' : "application/json",
-            success: function(data) {
-                $("#countryCity").append(data.city + " " + data.country),
-                $("#fewWords").append(data.fewWords),
-                $("#Age").append(data.age + " years old, " + data.gender),
-                $("#number").append(data.number)
-            },
-            error: function(error) {
-                console.log(error);
-            }
-        });
-     
-///////////////////////////////////////////////////////////DISPLAY-LINK ++ /////////////////////////////////////////////////////////////////     
-          var linkIdRequest = {
-              "id": localStorage.getItem("idCurrentUser")
-         }
-         
-          $.ajax({
-            url: "http://localhost:8080/link/selectOne",
-            type: "POST",
-            headers: {
-                Authorize : "Bearer " + localStorage.getItem('token')
-            },
-                'contentType' : "application/json",
-            "dataType": "json",
-            'data': JSON.stringify(linkIdRequest),
-            success: function(data) {
-                $("#facebook").attr("href", data.facebookLink);
-                $("#twitter").attr("href", data.twitterLink);
-                $("#linkedin").attr("href", data.linkedinLink);
-                $("#vk").attr("href", data.vkLink);      
-            }, 
-            error: function(error) {
-                console.log(error);
-            }
-        });
-         
-///////////////////////////////////////////////////////////DISPLAY-WORK ++ /////////////////////////////////////////////////////////////////    
-          var workIdRequest = {
-              "id": localStorage.getItem("idCurrentUser")
-         }
-         
-          $.ajax({
-            url: "http://localhost:8080/work/select",
-            type: "POST",
-            headers: {
-                'Authorize' : "Bearer " + localStorage.getItem('token')
-            },
-            'contentType' : "application/json",
-            "dataType": "json",
-            'data': JSON.stringify(workIdRequest),
-            success: function(data) {
-                $("#place1").append(data.place1);
-                $("#time1").append(data.time1);
-                $("#few1").append(data.few1);
-                $("#place2").append(data.place2);
-                $("#time2").append(data.time2);
-                $("#few2").append(data.few2);      
-            },
-            error: function(error) {
-                console.log(error);
-            }
-        });
-       
-///////////////////////////////////////////////////////////DISPLAY-STUDY ++ ////////////////////////////////////////////////////////////////         
-         var studyIdRequest = {
-              "id": localStorage.getItem("idCurrentUser")
-         }
-         
-         $.ajax({
-            url: "http://localhost:8080/study/select",
-            type: "POST",
-            headers: {
-                'Authorize' : "Bearer " + localStorage.getItem('token')
-            },
-            'contentType' : "application/json",
-            "dataType": "json",
-            'data': JSON.stringify(studyIdRequest),
-            success: function(data) {
-                $("#splace1").append(data.place1);
-                $("#stime1").append(data.time1);
-                $("#sfew1").append(data.few1);
-            },
-            error: function(error) {
-                console.log(error);
-            }
-        });
- 
       /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////DISPLAY-NOTE ++ ///////////////////////////////////////////////////////
      /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -663,56 +470,58 @@
        $(".aLink").remove();
     });
      
-     
-///////////////////////////////////////////////////////////DISPLAY-USER-REGISTER ++ ////////////////////////////////////////////////////////
     
-    var urlFirstPart = "http://localhost:8080/user/get/by/";
-        var urlSecondPart = localStorage.getItem("idCurrentUser");
-        var urlFull = urlFirstPart.concat(urlSecondPart);
-    
-    $.ajax({
-        url: urlFull,
-        type: "GET",
-        headers: {
-            'Authorize' : "Bearer " + localStorage.getItem('token'),
-        },
-        contentType : "application/json",
-        dataType: "json",
-        success: function(data) {
-            $("#emailHeader").append(data.email);
-            $("#FirstNameAndLastName").append("<h2 style='font-weight:bold'>" + data.lastName + " " + data.firstName + "</h2>");
-            $("#email").append(data.email);
-        },
-        'eror': function(error) {
-            alert("ERROR");
-        }
-    });
-
     
     </script>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+    <script>
+        $(document).ready(function() {
+
+            var $randomnbr = $('.nbr');
+            var $timer = 10;
+            var $it;
+            var $data = 0;
+            var index;
+            var change;
+            var letters = ["T", "h", "i", "s", " ", "p", "a", "g", "e", " ", "i", "s", " ", "s", "t", "i", "l", "l", " ", "u", "n", "d", "e", "r", " ", "d", "e", "v", "e", "l", "o", "p", "m", "e", "n", "t", " ", "!", "!", "!"];
+
+            $randomnbr.each(function() {
+
+                change = Math.round(Math.random() * 100);
+                $(this).attr('data-change', change);
+
+            });
+
+            function random() {
+                return Math.round(Math.random() * 9);
+            };
+
+            function select() {
+                return Math.round(Math.random() * $randomnbr.length + 1);
+            };
+
+            function value() {
+                $('.nbr:nth-child(' + select() + ')').html('' + random() + '');
+                $('.nbr:nth-child(' + select() + ')').attr('data-number', $data);
+                $data++;
+
+                $randomnbr.each(function() {
+                    if (parseInt($(this).attr('data-number')) > parseInt($(this).attr('data-change'))) {
+                        index = $('.ltr').index(this);
+                        $(this).html(letters[index]);
+                        $(this).removeClass('nbr');
+                    }
+                });
+
+            };
+
+            $it = setInterval(value, $timer);
+
+        });
+    </script>
+
     <script>
         function setDate() {
             // get current date
@@ -748,6 +557,24 @@
     </script>
 
     <script>
+        function myFunction() {
+            var inputText = document.getElementById("input").value;
+            var inputText2 = document.getElementById("input2").value;
+            var element = document.createElement("a");
+            element.setAttribute('href', inputText);
+            element.appendChild(document.createTextNode(inputText2));
+            document.getElementById('category').appendChild(element);
+        }
+
+        function clearThis(target) {
+            if (target.value != null) {
+                target.value = "";
+            }
+        }
+    </script>
+
+
+    <script>
         try {
             Typekit.load({
                 async: true
@@ -777,10 +604,6 @@
             }
         });
     </script>
-
-
-
-
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>

@@ -34,7 +34,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active" style="padding-right:10px;">
-                    <a href="index.html" class="nav-link" style="font-size:25px; font-weight:bolder">START PAGE</a>
+                    <a href="public/public/index.html" class="nav-link" style="font-size:25px; font-weight:bolder">START PAGE</a>
                 </li>
                 <li class="nav-item" style="font-size:25px; font-weight: normal, padding-right:10px;">
                     <a href="#" class="nav-link" data-toggle="modal" data-target="#t_and_c_m2">INFORMATION</a>
@@ -436,16 +436,27 @@
                             success:function(data){
                                 if(data.length != 0){
                                     alert("You have been blocked by administrator ! Sorry.");
-                                } else {
-                                    window.open('Settings_Of_Page.html','_self',false);
                                 }
                             },
                             error:function(error){
-                                window.open('Settings_Of_Page.html','_self',false);
                                 console.log(error);
                             }
                         });
-                    },
+
+                        alert("Login +");
+                        window.open('http://localhost:8080/public/settings', '_self', false);
+                        $.ajax({
+                            url:"http://localhost:8080/public/settings",
+                            type:"GET",
+                            contentType:"application/json",
+                            success:function(){
+                            },
+                            error:function(error){
+                                console.log(error);
+                            }
+                        });
+
+                        },
                     error: function(error) {
                         alert("-");
                     }
