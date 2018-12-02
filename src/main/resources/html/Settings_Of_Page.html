@@ -1,0 +1,1136 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Settings</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/Setting_Of_Page.css">
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Francois+One" rel="stylesheet">
+    <link rel="stylesheet" href="css/addNote.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://use.fontawesome.com/07b0ce5d10.js"></script>
+
+   <link href="https://fonts.googleapis.com/css?family=Coming+Soon" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Audiowide|Passion+One" rel="stylesheet">
+</head>
+
+<body>
+    <div class="bg">
+        <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+            <a class="navbar-brand"><img id = "emblem" class="emblem" src="images/horseshoe.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active" style="padding-right:10px;">
+                        <a class="nav-link" style="font-size:25px; font-weight:bolder">SETTINGS</a>
+                    </li>
+                    <li class="nav-item" style="font-size:25px; font-weight: normal, padding-right:10px;">
+                        <a href="#" class="nav-link" data-toggle="modal" data-target="#t_and_c_m2">INFORMATION</a>
+                    </li>
+                    <li class="nav-item " style=font-size:25px font-weight: normal>
+                </ul>
+                <form id="SearchWindow" class="form-inline my-2 my-lg-0">
+                    <div id="containerForClock" class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="clock text-center">
+                                    <span id="hour">24 : </span>
+                                    <span id="minute">00 : </span>
+                                    <span id="second">00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="social-container">
+                    <ul class="social-icons">
+                        <li><a href="Friends.html" data-toggle="tooltip" title="Messanger"><i class="fa fa-envelope"></i></a></li>
+                        <li><a href="index.html" data-toggle="tooltip" title="Log out"><i class="fa fa-sign-out"></i></a></li>
+                    </ul>
+                </div>
+                <div class="admin-bar" style="font-size: 22px;">
+                    <nav class="nav nav-inline">
+                        <a id="emailHeader" class="nav-link" style="color: darkgrey; font-style: italic; font-size: 14px"></a><img src="images/user.gif" class="img-fluid rounded-circle" id="photoHeader" style="width: 40px; height: 35px; padding-left: 2%">
+                    </nav>
+                </div>
+            </div>
+        </nav>
+        <div class="modal fade" id="t_and_c_m2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="myModalLabel">uTalk in details:</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    </div>
+                    <div class="modal-body">
+                        <div style="display: flex; flex-direction:column; height: 500px;">
+                            <p><img src="images/MainLogo.png" alt="main_logo" style="width: 40%; height: 45%; margin-left: 30%;">
+                                <div>
+                                    uT (uTalk; Ukrainian: Ютолк, meaning YouTellSmbdSmth) is a Ukrainian-based online social networking service. It is available only in the English language, thougth it was created for native speakers of Ukraine. It is especially popular among English-speaking users. uTalk allows users to message each other privately, share and tag images, audio and video, and to make new friends. It is based in Lviv, Ukraine.
+                                </div>
+                        </div>
+                        <div class="modal-footer" style="margin-top: -10%;">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div id="contentFlex">
+            <div>
+                <nav class="main-menu">
+                    <ul>
+                        <li>
+                            <a href="profile.html">
+                    <i class="fa fa-home fa-2x"></i>
+                        <span class="nav-text">Profile</span>
+                </a>
+                        </li>
+                        <li class="has-subnav">
+                            <a href="Friends.html">
+                    <i class="fa fa-envelope fa-2x"></i>
+                        <span class="nav-text">Messanger</span>
+                </a>
+                        </li>
+                        <li class="has-subnav">
+                            <a href="Settings_Of_Page.html" style="color: white">
+                    <i class="fa fa-gears fa-2x"></i>
+                    <span class="nav-text">Settings of page</span>
+                </a>
+                        </li>
+                        <li class="has-subnav">
+                            <a href="SavedFiles.html">
+                   <i class="fa fa-folder-open fa-2x"></i>
+                    <span class="nav-text">Saved Files</span>
+                </a>
+                        </li>
+                        <li>
+                            <a href="PhotoPage.html">
+                    <i class="fa fa-camera-retro fa-2x"></i>
+                    <span class="nav-text">Photos</span>
+                </a>
+                        </li>
+                        <li>
+                            <a href="Planner.html">
+                   <i class="fa fa-table fa-2x"></i>
+                    <span class="nav-text">Plans-Helper</span>
+                </a>
+                        </li>
+                        <li>
+                            <a href="VisitGalleryOfFriend.html">
+                    <i class="fa fa-photo fa-2x"></i>
+                    <span class="nav-text">Gallery</span>
+                </a>
+                        </li>
+                        <li>
+                            <a href="Documentation.html">
+                   <i class="fa fa-info fa-2x"></i>
+                    <span class="nav-text">Documentation</span>
+                </a>
+                        </li>
+                    </ul>
+                    <li>
+                        <a href="index.html">
+                         <i class="fa fa-power-off fa-2x"></i>
+                        <span class="nav-text" style="color: red; font-weight: bold ">Logout</span>
+                    </a>
+                    </li>
+                </nav>
+            </div>
+
+           <div id="CenterAreaFlex" style="width: 100%;">
+            <div class="sidebar">
+                <div class="container" style="margin-top: 5%; margin-bottom: 5%; margin-left: 3%;">
+                    <form class="form-horizontal">
+                        <fieldset>
+                            <legend style="font-size: 30px; font-family: 'Anton', sans-serif; padding:0;"> General </legend>
+
+                            <div class="form-group ">
+                                <label class="col-md-10 control-label" for="gender " style="font-family: 'Francois One', sans-serif;">Country</label>
+                                <div class="col-md-10">
+                                    <input id="country" name="textinput" type="text" placeholder="Country" class="form-control input-md">
+                                </div>
+                            </div>
+
+                            <div class="form-group ">
+                                <label class="col-md-10 control-label" for="gender " style="font-family: 'Francois One', sans-serif;">City</label>
+                                <div class="col-md-10">
+                                    <input id="city" name="textinput" type="text" placeholder="City" class="form-control input-md">
+                                </div>
+                            </div>
+
+                            <div class="form-group ">
+                                <label class="col-md-10 control-label" for="gender " style="font-family: 'Francois One', sans-serif;">Gender</label>
+                                <div class="col-md-10">
+                                    <input id="gender" name="textinput" type="text" placeholder="Gender" class="form-control input-md">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="textinput" style="font-family: 'Francois One', sans-serif;">Age</label>
+                                <div class="col-md-10">
+                                    <input id="age" name="textinput" type="number" placeholder="Age" class="form-control input-md">
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-10">
+                                <label class="col-md-10 control-label" for="textinput" style="font-family: 'Francois One', sans-serif; margin-left: -5%">Few words about yourself</label>
+                                <div class="input-controls-container expand">
+                                    <textarea id="fewWords" class="form-control" style="color: grey">Type text</textarea>
+                                    <div class="input-controls">
+                                        <div class="btn-group">
+                                            <button class="btn btn-link">
+        		            <span class="glyphicon glyphicon-paperclip"></span>
+        		        </button>
+                                            <button class="btn btn-link">
+        		            <span class="glyphicon glyphicon-ok"></span>
+        		        </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-md-7 control-label" for="selectbasic" style="font-family: 'Francois One', sans-serif;">Number</label>
+                                <div class="col-md-10">
+                                    <input id="number" name="textinput" type="text" placeholder="Number" class="form-control input-md">
+                                </div>
+                            </div>
+                            
+                              <div class="form-group" style="margin-top: -10px;">
+                                <label class="col-md-4 control-label" for="singlebutton"></label>
+                                <div>
+                                    <button id="saveBtn1" type="button" name="singlebutton" class="btn btn-primary">Save changes<i class="fa fa-floppy-o fa-2x" aria-hidden="true"></i></button>
+                                </div>
+                            </div>
+                            
+                           <form>
+                                <div class="form-group">
+                                    <label for="control-label" style="font-family: 'Francois One', sans-serif; margin-left: 5%">Change your profile photo</label>
+                                    <input type="file" class="form-control-file" id="exampleFormControlFile1" style="margin-left: 
+                                    5%">
+                                </div>
+                            </form>
+                           
+                            <div class="form-group" style="margin-top: -10px;">
+                                <label class="col-md-4 control-label" for="singlebutton"></label>
+                                <div>
+                                    <button id="saveBtn01" type="button" name="singlebutton" class="btn btn-primary" onclick="getFile(document.getElementById('exampleFormControlFile1'))">Save avatar<i class="fa fa-floppy-o fa-2x" aria-hidden="true"></i></button>
+                                </div>
+                            </div>
+                            
+                             <script>
+    
+                                    function getFile(object) {
+                                        var file = object.files[0];
+                                        var reader = new FileReader();
+                                        reader.readAsDataURL(file);
+                                        reader.onload = function() {
+                                            console.log("uploading...");
+                                            var readFile = reader.result;
+                                            console.log(readFile);
+
+                                            var avatarRequest = {
+                                                photo: readFile,
+                                                idUser: localStorage.getItem("idCurrentUser")
+                                            }
+
+                                            var urlFirstPart = "http://localhost:8080/avatar/";
+                                            var urlSecondPart = localStorage.getItem("idCurrentUser");
+                                            var urlFull = urlFirstPart.concat(urlSecondPart);
+
+                                            $.ajax({
+                                                'url': urlFull,
+                                                'type': "PUT",
+                                                headers: {
+                                                    'Authorize' : "Bearer " + localStorage.getItem('token')
+                                                },
+                                                'contentType' : "application/json",
+                                                "dataType": "json",
+                                                'data': JSON.stringify(avatarRequest),
+                                                'success': function(data) {
+                                                    console.log(data);
+                                                },
+                                                'eror': function(error) {
+                                                    alert("ERROR");
+                                                }
+                                            });
+                                        }
+                                    }
+
+                                 var avatarIdRequest = {
+                                     id : localStorage.getItem("idCurrentUser")
+                                 }
+                                 
+                                 $.ajax({
+                                    url: "http://localhost:8080/avatar/select",
+                                    type: "POST",
+                                    headers: {
+                                        'Authorize' : "Bearer " + localStorage.getItem('token')
+                                    },
+                                    'contentType' : "application/json",
+                                    "dataType": "json",
+                                    'data': JSON.stringify(avatarIdRequest),
+                                    success: function(data) {
+                                        var str1PhotoSrc = "img/";
+                                        var str2PhotoSrc = data.photo;
+                                        var str3PhotoSrc = str1PhotoSrc.concat(str2PhotoSrc);
+                                        $("#photoHeader").attr("src", str3PhotoSrc);
+                                    },
+                                    error: function(error) {
+                                        console.log(error);
+                                    }
+                                });
+                
+                
+        </script>   
+                            
+
+                        </fieldset>
+                    </form>
+
+                    <form class="form-horizontal">
+                        <fieldset>
+                            <legend style="font-size: 30px; font-family: 'Anton', sans-serif; padding:0;"> Links </legend>
+
+                            <div class="form-group ">
+                                <label class="col-md-10 control-label" for="gender " style="font-family: 'Francois One', sans-serif;">Facebook</label>
+                                <div class="col-md-10">
+                                    <input id="facebook" name="textinput" type="text" placeholder="Facebook" class="form-control input-md">
+                                </div>
+                            </div>
+
+                            <div class="form-group ">
+                                <label class="col-md-10 control-label" for="gender " style="font-family: 'Francois One', sans-serif;">Vk</label>
+                                <div class="col-md-10">
+                                    <input id="vk" name="textinput" type="text" placeholder="Vk" class="form-control input-md">
+                                </div>
+                            </div>
+
+                            <div class="form-group ">
+                                <label class="col-md-10 control-label" for="gender " style="font-family: 'Francois One', sans-serif;">Linkedin</label>
+                                <div class="col-md-10">
+                                    <input id="linkedin" name="textinput" type="text" placeholder="Linkedin" class="form-control input-md">
+                                </div>
+                            </div>
+
+                            <div class="form-group ">
+                                <label class="col-md-10 control-label" for="gender " style="font-family: 'Francois One', sans-serif;">Twitter</label>
+                                <div class="col-md-10">
+                                    <input id="twitter" name="textinput" type="text" placeholder="Twitter" class="form-control input-md">
+                                </div>
+                            </div>
+
+                            <div class="form-group" style="margin-top: -10px;">
+                                <label class="col-md-4 control-label" for="singlebutton"></label>
+                                <div>
+                                    <button id="saveBtn2" type="button" name="singlebutton" class="btn btn-primary">Save changes<i class="fa fa-floppy-o fa-2x" aria-hidden="true"></i></button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+           
+            <div id="wAnde">
+                <div class="work-experience">
+                    <form class="form-horizontal" id="form-horizontal3">
+                        <fieldset style="margin-top: -2%">
+
+                            <legend style="font-size: 30px; font-family: 'Anton', sans-serif; padding:0; margin-left: -2% color:black "> Work Experience </legend>
+
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <label class="col-md-10 control-label" for="textinput" style="font-family: 'Francois One', sans-serif;">Working Place#1</label>
+                                <div class="col-md-10">
+                                    <input id="place1" name="textinput" type="text" placeholder="Working place#1" class="form-control input-md">
+
+                                </div>
+                            </div>
+
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <label class="col-md-10 control-label" for="textinput" style="font-family: 'Francois One', sans-serif;">Period of work</label>
+                                <div class="col-md-10">
+                                    <input id="time1" name="textinput" type="text" placeholder="Period of work" class="form-control input-md">
+                                </div>
+                            </div>
+
+                            <div class="col-md-10">
+                                <label class="col-md-10 control-label" for="textinput" style="font-family: 'Francois One', sans-serif; margin-left: -3%">Brief summary about your job</label>
+                                <div class="input-controls-container expand">
+                                    <textarea id="few1" class="form-control" style="color: grey">Type text</textarea>
+                                    <div class="input-controls">
+                                        <div class="btn-group">
+                                            <button class="btn btn-link">
+        		            <span class="glyphicon glyphicon-paperclip"></span>
+        		        </button>
+                                            <button class="btn btn-link">
+        		            <span class="glyphicon glyphicon-ok"></span>
+        		        </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <label class="col-md-10 control-label" for="textinput" style="font-family: 'Francois One', sans-serif;">Working Place#2</label>
+                                <div class="col-md-10">
+                                    <input id="place2" name="textinput" type="text" placeholder="Working place#2" class="form-control input-md">
+
+                                </div>
+                            </div>
+
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <label class="col-md-10 control-label" for="textinput" style="font-family: 'Francois One', sans-serif;">Period of work</label>
+                                <div class="col-md-10">
+                                    <input id="time2" name="textinput" type="text" placeholder="Period of work" class="form-control input-md">
+                                </div>
+                            </div>
+
+                            <div class="col-md-10">
+                                <label class="col-md-10 control-label" for="textinput" style="font-family: 'Francois One', sans-serif; margin-left: -3%">Brief summary about your job</label>
+                                <div class="input-controls-container expand">
+                                    <textarea id="few2" class="form-control" style="color: grey">Type text</textarea>
+                                    <div class="input-controls">
+                                        <div class="btn-group">
+                                            <button class="btn btn-link">
+        		            <span class="glyphicon glyphicon-paperclip"></span>
+        		        </button>
+                                            <button class="btn btn-link">
+        		            <span class="glyphicon glyphicon-ok"></span>
+        		        </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group" style="margin-top: -10px;">
+                                <label class="col-md-4 control-label" for="singlebutton"></label>
+                                <div class="col-md-5">
+                                    <button id="saveBtn3" type="button" name="singlebutton" class="btn btn-primary">Save changes<i class="fa fa-floppy-o fa-2x" aria-hidden="true"></i></button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+
+               
+               
+               
+               
+                <div class="education">
+                    <div class="container">
+                        <form class="form-horizontal" id="form-horizontal4">
+                            <fieldset>
+                                <legend style="font-size: 30px; font-family: 'Anton', sans-serif; padding:0;"> EDUCATION </legend>
+
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-12 control-label" for="textinput" style="font-family: 'Francois One', sans-serif;">Studying Place#1</label>
+                                    <div class="col-md-10">
+                                        <input id="splace1" name="textinput" type="text" placeholder="Studying place#1" class="form-control input-md">
+                                    </div>
+                                </div>
+
+                                <!-- Text input-->
+                                <div class="form-group">
+                                    <label class="col-md-12 control-label" for="textinput" style="font-family: 'Francois One', sans-serif;">Period of studying</label>
+                                    <div class="col-md-10">
+                                        <input id="stime1" name="textinput" type="text" placeholder="Period of studying" class="form-control input-md">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-10">
+                                    <label class="col-md-10 control-label" for="textinput" style="font-family: 'Francois One', sans-serif; margin-left: -3%">Some details of studying</label>
+                                    <div class="input-controls-container expand">
+                                        <textarea id="sfew1" class="form-control" style="color: grey">Type text</textarea>
+                                        <div class="input-controls">
+                                            <div class="btn-group">
+                                                <button class="btn btn-link">
+                                                        <span class="glyphicon glyphicon-paperclip"></span>
+                                                    </button>
+                                                                            <button class="btn btn-link">
+                                                        <span class="glyphicon glyphicon-ok"></span>
+                                                    </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group" style="margin-top: -10px;">
+                                    <label class="col-md-4 control-label" for="singlebutton"></label>
+                                    <div class="col-md-5">
+                                        <button id="saveBtn4" type="button" name="singlebutton" class="btn btn-primary">Save changes<i class="fa fa-floppy-o fa-2x" aria-hidden="true"></i></button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                    </div>
+                </div>
+            </div>
+              
+        </div>
+    </div>
+
+<footer class="myfooter">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <h4 class="title-widget">Quick Links</h4>
+                <p>Use these useful links to go to the other online services quickly and without any additional actions</p>
+                <ul class="social social-circle">
+                    <li onclick="openInNewTab('https://www.instagram.com/?hl=ru')"><a class="icoInstagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li onclick="openInNewTab('https://www.facebook.com/')"><a class="icoFacebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                    <li onclick="openInNewTab('https://www.google.com.ua/?hl=ru')"><a class="icoGoogle"> <i class="fa fa-google"></i></a></li>
+                    <li onclick="openInNewTab('https://www.youtube.com/')"><a class="icoYouTube"> <i class="fa fa-youtube"></i></a></li>
+                </ul>
+            </div>
+            <div id="blocksOfFooter" class="col-sm-3">
+                <h4 class="title-widget">My Account</h4>
+                <span class=" social acount-icon">          
+                        <a href="profile.html" ><i class="icoFacebook fa fa-user-circle-o" aria-hidden=true></i>My Profile</a>
+                        <a href="Friends.html" ><i class="fa fa-users" aria-hidden="true"></i>My friends</a>
+                        <a href="Settings_Of_Page.html"><i class="fa fa-cogs" aria-hidden="true"></i>Settings</a>     
+                        
+                        <script>function openInNewTab(url) {
+                            var win = window.open(url, '_blank');
+                            win.focus();
+                        }</script>
+
+					</span>
+            </div>
+            <div id="blocksOfFooter" class="col-sm-3">
+                <h4 class="title-widget">Useful bookmarks</h4>
+                <div id="category" class="category"></div>
+                <div id="addBlockForFooter" class="col-xs-12 col-md-12">
+
+                    <div class="container" id="footerBtnFlex" style="margin-top: 5%; margin-right: 10%; color: #fff">
+                        <button id="searchBtn" type="button" style="box-shadow: 0 0 10px rgba(0,0,0,0.5); border-radius: 5px;"><a class="btn icon-btn btn-success" class=" col-md-6 col-xl-3"><i class="fa fa-plus-square fa-2x"></i></a></button>
+                        <button id="removeAllBtn" type="button" style="box-shadow: 0 0 10px rgba(0,0,0,0.5); border-radius: 5px;"><a onclick="func6_1()"  class="btn icon-btn btn-danger" class=" col-md-6" ><i class="fa fa-trash fa-2x"></i></a></button>
+                    </div>
+                    <div>
+                        <input id="input" style="width: 100%; box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */" placeholder="New link" type="text" class="form-control">
+                    </div>
+                    <div>
+                        <input id="input2" style="width: 100%; box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */" placeholder="Name" type="text" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div id="blocksOfFooter" class="col-sm-3">
+                <h4 class="title-widget">Your notes</h4><div>
+                <textarea id="textAreaFooter" placeholder="Type your note in this area: " style="font-family: 'Coming Soon', cursive; font-size: 25px; background-color:#919497; width: 100%; border-radius: 5px; box-shadow: 0 0 10px rgba(0,0,0,0.5);" name="Text1"  cols="15" rows="4"></textarea>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row text-center" id="creatorText"> Created, developed and designed by Khanas Vasyl</div>
+    </div>
+</footer>
+
+
+
+
+ <script>
+      
+     ///////////////////////////////////////////////////////////SAVE-INFO -- ///////////////////////////////////////////////////////////////
+
+     saveBtn1.onclick = function(){
+            var userInfo = {
+                country: $("#country").val(),
+                city: $("#city").val(),
+                fewWords: $("#fewWords").val(),
+                gender: $("#gender").val(),
+                age: $("#age").val(),
+                number: $("#number").val(),
+                idUser: localStorage.getItem("idCurrentUser")
+            }
+
+            var urlFirstPart = "http://localhost:8080/information/";
+            var urlSecondPart = localStorage.getItem("idCurrentUser");
+            var urlFull = urlFirstPart.concat(urlSecondPart);
+            
+         
+            $.ajax({
+                url: urlFull,
+                type: "PUT",
+                headers: {
+                    'Authorize' : "Bearer " + localStorage.getItem('token')
+                },
+                contentType : "application/json",
+                dataType: "json",
+                data: JSON.stringify(userInfo),
+                success: function(data) {
+                    console.log(data);
+                },
+                error: function(error) {
+                    alert("ERROR");
+                }
+            });
+        }
+    
+     
+     
+     
+///////////////////////////////////////////////////////////DISPLAY-INFO -- /////////////////////////////////////////////////////////////////        
+        var iduser = localStorage.getItem("idCurrentUser");
+    
+        var str1 = "http://localhost:8080/information/public/select/";
+            var str2 = iduser;
+                var str3 = str1.concat(str2);
+        
+         $.ajax({
+            url: str3,
+            type: "POST",
+            'contentType' : "application/json",
+            success: function(data) {
+                $("#country").val(data.country),
+                $("#city").val(data.city),
+                $("#fewWords").val(data.fewWords),
+                $("#gender").val(data.gender),
+                $("#age").val(data.age),
+                $("#number").val(data.number)
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });
+     
+///////////////////////////////////////////////////////////DISPLAY-LINK ++ /////////////////////////////////////////////////////////////////     
+          var linkIdRequest = {
+              "id": localStorage.getItem("idCurrentUser")
+         }
+         
+          $.ajax({
+            url: "http://localhost:8080/link/selectOne",
+            type: "POST",
+            headers: {
+                Authorize : "Bearer " + localStorage.getItem('token')
+            },
+                'contentType' : "application/json",
+            "dataType": "json",
+            'data': JSON.stringify(linkIdRequest),
+            success: function(data) {
+                $("#facebook").val(data.facebookLink);
+                $("#twitter").val(data.twitterLink);
+                $("#linkedin").val(data.linkedinLink);
+                $("#vk").val(data.vkLink);      
+            }, 
+            error: function(error) {
+                console.log(error);
+            }
+        });
+         
+///////////////////////////////////////////////////////////DISPLAY-WORK ++ /////////////////////////////////////////////////////////////////    
+          var workIdRequest = {
+              "id": localStorage.getItem("idCurrentUser")
+         }
+         
+          $.ajax({
+            url: "http://localhost:8080/work/select",
+            type: "POST",
+            headers: {
+                'Authorize' : "Bearer " + localStorage.getItem('token')
+            },
+            'contentType' : "application/json",
+            "dataType": "json",
+            'data': JSON.stringify(workIdRequest),
+            success: function(data) {
+                $("#place1").val(data.place1);
+                $("#time1").val(data.time1);
+                $("#few1").val(data.few1);
+                $("#place2").val(data.place2);
+                $("#time2").val(data.time2);
+                $("#few2").val(data.few2);      
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });
+       
+///////////////////////////////////////////////////////////DISPLAY-STUDY ++ ////////////////////////////////////////////////////////////////         
+         var studyIdRequest = {
+              "id": localStorage.getItem("idCurrentUser")
+         }
+         
+         $.ajax({
+            url: "http://localhost:8080/study/select",
+            type: "POST",
+            headers: {
+                'Authorize' : "Bearer " + localStorage.getItem('token')
+            },
+            'contentType' : "application/json",
+            "dataType": "json",
+            'data': JSON.stringify(studyIdRequest),
+            success: function(data) {
+                $("#splace1").val(data.place1);
+                $("#stime1").val(data.time1);
+                $("#sfew1").val(data.few1);
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });
+ 
+      /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////DISPLAY-NOTE ++ ///////////////////////////////////////////////////////////////////
+     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+     
+    var noteRequest = {
+        id: localStorage.getItem("idCurrentUser")
+    }
+
+    $.ajax({
+        url: "http://localhost:8080/note/selectOne",
+        type: "POST",
+        headers: {
+            'Authorize' : "Bearer " + localStorage.getItem('token'),
+        },
+        'contentType' : "application/json",
+        "dataType": "json",
+        'data': JSON.stringify(noteRequest),
+        success: function(data) {
+            $("#textAreaFooter").val(data.text);
+        },
+        error: function(error) {
+            console.log(error);
+        }
+    });
+
+///////////////////////////////////////////////////////////SAVE-NOTE ++ ///////////////////////////////////////////////////////////////////
+   
+    $("#textAreaFooter").focusout(function(){
+        
+        var note = {
+            text: $("#textAreaFooter").val(),
+            idUser: localStorage.getItem("idCurrentUser")
+        }
+           
+        var urlFirstPart = "http://localhost:8080/note/";
+        var urlSecondPart = localStorage.getItem("idCurrentUser");
+        var urlFull = urlFirstPart.concat(urlSecondPart);
+
+        $.ajax({
+            'url': urlFull,
+            'type': "PUT",
+            headers: {
+                'Authorize' : "Bearer " + localStorage.getItem('token'),
+            },
+            'contentType' : "application/json",
+            "dataType": "json",
+            'data': JSON.stringify(note),
+            'success': function(data) {
+                console.log(data);
+                $("#textAreaFooter").val(data.text);
+            },
+            'eror': function(error) {
+                alert("ERROR");
+            }
+        });
+
+///////////////////////////////////////////////////////////DISPLAY-NOTE-x2 ++ //////////////////////////////////////////////////////////////////
+        
+        var noteRequest = {
+            id: localStorage.getItem("idCurrentUser")
+        }
+
+        $.ajax({
+            url: "http://localhost:8080/note/selectOne",
+            type: "POST",
+            headers: {
+                'Authorize' : "Bearer " + localStorage.getItem('token')
+            },
+            'contentType' : "application/json",
+            "dataType": "json",
+            'data': JSON.stringify(noteRequest),
+            success: function(data) {
+                $("#textAreaFooter").val(data.text);
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });
+    });
+    
+///////////////////////////////////////////////////////////DISPLAY-BOOKMARKS ++ ////////////////////////////////////////////////////////////
+     var idCurrent = localStorage.getItem("idCurrentUser");
+     
+    var book = {
+       id: idCurrent
+    }
+
+    $.ajax({
+        url: "http://localhost:8080/bookmark/selectOne",
+        type: "POST",
+        headers: {
+            'Authorize' : "Bearer " + localStorage.getItem('token')
+        },
+        'contentType' : "application/json",
+        "dataType": "json",
+        'data': JSON.stringify(book),
+        success: function(data) {
+            for (var i = 0; i < data.length; i++) {
+                var element = document.createElement("a");
+                element.setAttribute('class', "aLink");
+                element.setAttribute('href', data[i].link);
+                element.appendChild(document.createTextNode(data[i].name));
+                document.getElementById('category').appendChild(element);
+            }
+        },
+        error: function(error) {
+            console.log(error);
+        }
+    });
+     
+///////////////////////////////////////////////////////////SAVE-BOOKMARK ++ ////////////////////////////////////////////////////////////////
+
+     
+    searchBtn.onclick = function() {
+        var idCurrent = localStorage.getItem("idCurrentUser");
+        var bookmark = {
+            link: $("#input").val(),
+            name: $("#input2").val(),
+            idUser: idCurrent
+        }
+
+        $.ajax({
+            'url': "http://localhost:8080/bookmark",
+            'type': "POST",
+            headers: {
+                'Authorize' : "Bearer " + localStorage.getItem('token')
+            },
+            'contentType' : "application/json",
+            "dataType": "json",
+            'data': JSON.stringify(bookmark),
+            success: function(data) {
+                console.log(data);
+                $(".aLink").remove();
+                 var book = {
+                       id: idCurrent
+                    }
+
+                    $.ajax({
+                        url: "http://localhost:8080/bookmark/selectOne",
+                        type: "POST",
+                        headers: {
+                            'Authorize' : "Bearer " + localStorage.getItem('token')
+                        },
+                        'contentType' : "application/json",
+                        "dataType": "json",
+                        'data': JSON.stringify(book),
+                        success: function(data) {
+                            for (var i = 0; i < data.length; i++) {
+                                var element = document.createElement("a");
+                                element.setAttribute('class', "aLink");
+                                element.setAttribute('href', data[i].link);
+                                element.appendChild(document.createTextNode(data[i].name));
+                                document.getElementById('category').appendChild(element);
+                            }
+                        },
+                        error: function(error) {
+                            console.log(error);
+                        }
+                    });
+                
+            },
+            'eror': function(error) {
+                alert("ERROR");
+            }
+        });
+
+
+
+    }
+    
+///////////////////////////////////////////////////////////DELETE-BOOKMARKS ++ /////////////////////////////////////////////////////////////
+
+    
+//    function func6_1() {
+//        location.reload();
+//    }
+
+
+   $("#removeAllBtn").click(function(){
+       var idUser = localStorage.getItem("idCurrentUser");
+       
+       var deleteAll = {
+             id: idUser
+        }
+        $.ajax({
+            'url': "http://localhost:8080/bookmark/delete",
+            'type': "POST",
+             headers: {
+                'Authorize' : "Bearer " + localStorage.getItem('token')
+            },
+            'contentType' : "application/json",
+            "dataType": "json",
+            'data': JSON.stringify(deleteAll),
+            'eror': function(error) {
+                alert("ERROR");
+            }
+        });
+       $(".aLink").remove();
+    });
+     
+     
+///////////////////////////////////////////////////////////DISPLAY-USER-REGISTER ++ ////////////////////////////////////////////////////////
+    
+    var urlFirstPart = "http://localhost:8080/user/get/by/";
+        var urlSecondPart = localStorage.getItem("idCurrentUser");
+        var urlFull = urlFirstPart.concat(urlSecondPart);
+    
+    $.ajax({
+        url: urlFull,
+        type: "GET",
+        headers: {
+                'Authorize' : "Bearer " + localStorage.getItem('token'),
+        },
+        contentType : "application/json",
+        dataType: "json",
+        success: function(data) {
+            $("#emailHeader").append(data.email);
+        },
+        'eror': function(error) {
+            alert("ERROR");
+        }
+    });
+
+
+///////////////////////////////////////////////////////////SAVE-LINK ++ ///////////////////////////////////////////////////////////////////
+
+    saveBtn2.onclick = function() {
+        var links = {
+            facebookLink: $("#facebook").val(),
+            vkLink: $("#vk").val(),
+            linkedinLink: $("#linkedin").val(),
+            twitterLink: $("#twitter").val(),
+            idUser: localStorage.getItem("idCurrentUser")
+        }
+
+        var urlFirstPart = "http://localhost:8080/link/";
+        var urlSecondPart = localStorage.getItem("idCurrentUser");
+        var urlFull = urlFirstPart.concat(urlSecondPart);
+        
+        $.ajax({
+            'url': urlFull,
+            'type': "PUT",
+             headers: {
+                    'Authorize' : "Bearer " + localStorage.getItem('token')
+            },
+              'contentType' : "application/json",
+            "dataType": "json",
+            'data': JSON.stringify(links),
+            'success': function(data) {
+                console.log(data);
+    
+            },
+            'eror': function(error) {
+                alert("ERROR");
+            }
+        });
+    }
+ 
+///////////////////////////////////////////////////////////SAVE-WORK ++ ///////////////////////////////////////////////////////////////////
+    
+    saveBtn3.onclick = function() {
+        var work = {
+            place1: $("#place1").val(),
+            place2: $("#place2").val(),
+            few1: $("#few1").val(),
+            few2: $("#few2").val(),
+            time1: $("#time1").val(),
+            time2: $("#time2").val(),
+            idUser: localStorage.getItem("idCurrentUser")
+        }
+        
+         var urlFirstPart = "http://localhost:8080/work/";
+         var urlSecondPart = localStorage.getItem("idCurrentUser");
+         var urlFull = urlFirstPart.concat(urlSecondPart);
+
+        $.ajax({
+            'url': urlFull,
+            'type': "PUT",
+            headers: {
+                    'Authorize' : "Bearer " + localStorage.getItem('token')
+            },
+            'contentType' : "application/json",
+            "dataType": "json",
+            'data': JSON.stringify(work),
+            'success': function(data) {
+                console.log(data);
+              
+            },
+            'eror': function(error) {
+                alert("ERROR");
+            }
+        });
+    }
+
+///////////////////////////////////////////////////////////SAVE-STUDY ++ ///////////////////////////////////////////////////////////////////
+
+    saveBtn4.onclick = function() {
+        var study = {
+            place1: $("#splace1").val(),
+            few1: $("#sfew1").val(),
+            time1: $("#stime1").val(),
+            idUser: localStorage.getItem("idCurrentUser")
+        }
+
+         var urlFirstPart = "http://localhost:8080/study/";
+         var urlSecondPart = localStorage.getItem("idCurrentUser");
+         var urlFull = urlFirstPart.concat(urlSecondPart);
+        
+        $.ajax({
+            'url': urlFull,
+            'type': "PUT",
+            headers: {
+                    'Authorize' : "Bearer " + localStorage.getItem('token')
+            },
+            'contentType' : "application/json",
+            "dataType": "json",
+            'data': JSON.stringify(study),
+            'success': function(data) {
+                console.log(data);
+                
+            },
+            'eror': function(error) {
+                alert("ERROR");
+            }
+        });
+    }
+</script>
+    
+    
+    
+    
+    
+    
+    
+<script>
+
+///////////////////////////////////////////////////////////OTHER-JS-code ++ ////////////////////////////////////////////////////////////////
+
+        try {
+            Typekit.load({
+                async: true
+            });
+        } catch (e) {}
+
+        $(function() {
+            function getParameterByName(name, url) {
+                if (!url) {
+                    url = window.location.href;
+                }
+                name = name.replace(/[\[\]]/g, "\\$&");
+                var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                    results = regex.exec(url);
+                if (!results) return null;
+                if (!results[2]) return '';
+                return decodeURIComponent(results[2].replace(/\+/g, " "));
+            }
+            if (getParameterByName('email') == "success") { 
+                document.getElementById("mailer").style.pointerEvents = "none";
+                document.getElementById("mailer").style.filter = "blur(2px)";
+                document.getElementById("contactwas").style.display = "block";
+                //clear url
+
+            }
+        });
+
+        $(function() {
+            // Input radio-group visual controls
+            $('.radio-group label').on('click', function() {
+                $(this).removeClass('not-active').siblings().addClass('not-active');
+            });
+        });
+    </script>
+    
+
+
+    <script>
+        try {
+            Typekit.load({
+                async: true
+            });
+        } catch (e) {}
+
+        $(function() {
+            function getParameterByName(name, url) {
+                if (!url) {
+                    url = window.location.href;
+                }
+                name = name.replace(/[\[\]]/g, "\\$&");
+                var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                    results = regex.exec(url);
+                if (!results) return null;
+                if (!results[2]) return '';
+                return decodeURIComponent(results[2].replace(/\+/g, " "));
+            }
+            if (getParameterByName('email') == "success") {
+                //make message permanent
+                // alert("Contact was made!\nWe will get back to you as soon as possible.");
+                document.getElementById("mailer").style.pointerEvents = "none";
+                document.getElementById("mailer").style.filter = "blur(2px)";
+                document.getElementById("contactwas").style.display = "block";
+                //clear url
+
+            }
+        });
+    </script>
+
+    <script>
+        function setDate() {
+            // get current date
+            const now = new Date();
+            // get seconds, minutes and hours
+            var seconds = "0" + now.getSeconds();
+            var minutes = "0" + now.getMinutes();
+            var hours = "0" + now.getHours();
+
+            //change html clock time
+
+            document.getElementById('second').innerHTML = seconds.slice(-2);
+            document.getElementById('minute').innerHTML = minutes.slice(-2) + " : ";
+            document.getElementById('hour').innerHTML = hours.slice(-2) + " : ";
+        }
+        setInterval(setDate, 1000);
+        $(document).ready(function() {
+            $('.menu li:has(ul)').hover(function(e) {
+                e.preventDefault();
+                if ($(this).hasClass('activado')) {
+                    $(this).removeClass('activado');
+                    $(this).children('ul').slideUp();
+                } else {
+                    $('.menu li ul').slideUp();
+                    $('.menu li').removeClass('activado');
+                    $(this).addClass('activado');
+                    $(this).children('ul').slideDown();
+                }
+            });
+        });
+    </script>
+    
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

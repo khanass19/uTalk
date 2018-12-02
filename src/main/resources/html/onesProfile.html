@@ -1,0 +1,767 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Profile</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Delius+Unicase:700" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Kalam:700" rel="stylesheet">
+    <link rel="stylesheet" href="css/Profile.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Audiowide|Passion+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Glegoo|Teko" rel="stylesheet">
+    <link rel="stylesheet" href="css/addNote.css">
+    <link href="https://fonts.googleapis.com/css?family=Hi+Melody" rel="stylesheet">
+    <script src="https://use.fontawesome.com/07b0ce5d10.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+      <link href="https://fonts.googleapis.com/css?family=Coming+Soon" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Caveat+Brush" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="bg">
+    <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+            <a class="navbar-brand"><img id = "emblem" class="emblem" src="images/horseshoe.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active" style="padding-right:10px;">
+                        <a class="nav-link" style="font-size:25px; font-weight:bolder" id="titleHeader"></a>
+                    </li>
+                    <li class="nav-item " style=font-size:25px font-weight: normal>
+                </ul>
+                <form id="SearchWindow" class="form-inline my-2 my-lg-0">
+                    <div id="containerForClock" class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="clock text-center">
+                                    <span id="hour">24 : </span>
+                                    <span id="minute">00 : </span>
+                                    <span id="second">00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="social-container">
+                    <ul class="social-icons">
+                        <li><a href="Friends.html" data-toggle="tooltip" title="Messanger"><i class="fa fa-envelope"></i></a></li>
+                        <li><a href="index.html" data-toggle="tooltip" title="Log out"><i class="fa fa-sign-out"></i></a></li>
+                    </ul>
+                </div>
+                <div class="admin-bar" style="font-size: 22px;">
+                    <nav class="nav nav-inline">
+                        <a id="emailHeader" class="nav-link" style="color: darkgrey; font-style: italic; font-size: 14px"></a><img src="images/user.gif" id="miniPhoto" class="img-fluid rounded-circle" style="width: 40px; height: 35px; padding-left: 2%">
+                    </nav>
+                </div>
+            </div>
+        </nav>
+        <div class="modal fade" id="t_and_c_m2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content" style="margin-top: 10%;" id="modal_content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="myModalLabel">Find other user: </h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    </div>
+                    <div class="modal-body">
+                        <div style="display: flex; margin-bottom: 2%;">
+                        <input type="text" placeholder="Type name/surname..." id="inputBtn">  
+                        <button id="findBtn">Find</button>   
+                        </div>
+                        <ul id="notebook_ul">
+                           
+                        </ul>
+                
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="flex1Content">
+            <div>
+                <nav class="main-menu">
+                    <ul>
+                        <li>
+                            <a href="profile.html">
+                    <i class="fa fa-home fa-2x"></i>
+                        <span class="nav-text">Profile</span>
+                </a>
+                        </li>
+                        <li class="has-subnav">
+                            <a href="Friends.html">
+                    <i class="fa fa-envelope fa-2x"></i>
+                        <span class="nav-text">Messanger</span>
+                </a>
+                        </li>
+                        <li class="has-subnav">
+                            <a href="Settings_Of_Page.html">
+                     <i class="fa fa-gears fa-2x"></i>
+                    <span class="nav-text">Settings of page</span>
+                </a>
+                        </li>
+                        <li class="has-subnav">
+                            <a href="SavedFiles.html">
+                   <i class="fa fa-folder-open fa-2x"></i>
+                    <span class="nav-text">Saved Files</span>
+                </a>
+                        </li>
+                        <li>
+                            <a href="PhotoPage.html">
+                    <i class="fa fa-camera-retro fa-2x"></i>
+                    <span class="nav-text">Photos</span>
+                </a>
+                        </li>
+                        <li>
+                            <a href="Planner.html">
+                   <i class="fa fa-table fa-2x"></i>
+                    <span class="nav-text">Plans-Helper</span>
+                </a>
+                        </li>
+                        <li>
+                            <a href="VisitGalleryOfFriend.html">
+                    <i class="fa fa-photo fa-2x"></i>
+                    <span class="nav-text">Gallery</span>
+                </a>
+                        </li>
+                        <li>
+                            <a href="Documentation.html">
+                   <i class="fa fa-info fa-2x"></i>
+                    <span class="nav-text">Documentation</span>
+                </a>
+                        </li>
+                    </ul>
+                    <li>
+                        <a href="index.html">
+                         <i class="fa fa-power-off fa-2x"></i>
+                        <span class="nav-text" style="color: red; font-weight: bold ">Logout</span>
+                    </a>
+                    </li>
+                </nav>
+            </div>
+            
+            <div id="sidebarFlex">
+            <div class="sidebar">
+                <div class="sidebar-top">
+                    <img class="profile-image" id="MainPhoto" src="images/user.gif">
+                    <div class="profile-basic">
+                        <h3 id="FirstNameAndLastName" class="name"></h3>
+                        <h6 id="Age" class="name"></h6>
+                    </div>
+                </div>
+                <div class="profile-info ">
+                    <textarea class="shadow" id="fewWords" cols="52" rows="5" disabled style="overflow:hidden"></textarea>
+                  </div>
+                  
+                <div class="profile-info">
+                    <p class="key">Contact : </p>
+                    <p class="value" id="number"></p>
+                </div>
+                <div class="profile-info" >
+                    <p class="key">Email : </p>
+                    <p class="value2" id="email"></p>
+                </div>
+                <div class="profile-info">
+                    <p class="key">Address : </p>
+                    <p class="value" id="countryCity">
+                    </p>
+                </div>
+                <div class="profile-info" style="margin-left: 5%;">
+                    <div id="social">
+                        <a class="facebookBtn smGlobalBtn" id="facebook"></a>
+                        <a class="twitterBtn smGlobalBtn" id="twitter"></a>
+                        <a class="linkedinBtn smGlobalBtn" id="linkedin"></a>
+                        <a class="vkBtn smGlobalBtn" id="vk"></a>
+                    </div>
+                </div>
+                <a href="FriendGallery.html"><button id="buttonGallery">GALLERY<i class="fa fa-camera" style="margin-bottom: 3%;"></i></button></a>
+            </div>
+
+
+            <div class="content">
+                <div class="work-experience">
+                    <h1 class="nameW"> Work Experience</h1>
+                    <div class="info">
+                        <p class="sub-heading" style="width: 90%;" id="place1"></p>
+                        <p class="duration" style="width: 90%;" id="time1"></p>
+                        <p class="describe" style="width: 90%;" id="few1"></p>
+                    </div>
+                    <div class="info">
+                        <p class="sub-heading" style="width: 90%;" id="place2"></p>
+                        <p class="duration" style="width: 90%;" id="time2"></p>
+                        <p class="describe" style="width: 90%;" id="few2"></p>
+                    </div>
+                </div>
+                <div class="education">
+                    <h1 class="nameW">Education</h1>
+                    <div class="info">
+                        <p class="sub-heading" style="width: 90%;" id="splace1"></p>
+                        <p class="duration" style="width: 90%;" id="stime1"></p>
+                        <p class="describe" style="width: 90%;" id="sfew1"></p>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+   <footer class="myfooter">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <h4 class="title-widget">Quick Links</h4>
+                <p>Use these useful links to go to the other online services quickly and without any additional actions</p>
+                <ul class="social social-circle">
+                    <li onclick="openInNewTab('https://www.instagram.com/?hl=ru')"><a class="icoInstagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li onclick="openInNewTab('https://www.facebook.com/')"><a class="icoFacebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                    <li onclick="openInNewTab('https://www.google.com.ua/?hl=ru')"><a class="icoGoogle"> <i class="fa fa-google"></i></a></li>
+                    <li onclick="openInNewTab('https://www.youtube.com/')"><a class="icoYouTube"> <i class="fa fa-youtube"></i></a></li>
+                </ul>
+            </div>
+            <div id="blocksOfFooter" class="col-sm-3">
+                <h4 class="title-widget">My Account</h4>
+                <span class=" social acount-icon">          
+                        <a href="profile.html" ><i class="icoFacebook fa fa-user-circle-o" aria-hidden=true></i>My Profile</a>
+                        <a href="Friends.html" ><i class="fa fa-users" aria-hidden="true"></i>My friends</a>
+                        <a href="Settings_Of_Page.html"><i class="fa fa-cogs" aria-hidden="true"></i>Settings</a>     
+                        
+                        <script>function openInNewTab(url) {
+                            var win = window.open(url, '_blank');
+                            win.focus();
+                        }</script>
+
+					</span>
+            </div>
+            <div id="blocksOfFooter" class="col-sm-3">
+                <h4 class="title-widget">Useful bookmarks</h4>
+                <div id="category" class="category"></div>
+                <div id="addBlockForFooter" class="col-xs-12 col-md-12">
+
+                    <div class="container" id="footerBtnFlex" style="margin-top: 5%; margin-right: 10%; color: #fff">
+                        <button id="searchBtn" type="button" style="box-shadow: 0 0 10px rgba(0,0,0,0.5); border-radius: 5px;"><a class="btn icon-btn btn-success" class=" col-md-6 col-xl-3"><i class="fa fa-plus-square fa-2x"></i></a></button>
+                        <button onclick="func6()" id="removeAllBtn" type="button" style="box-shadow: 0 0 10px rgba(0,0,0,0.5); border-radius: 5px;"><a onclick="func6_1()"  class="btn icon-btn btn-danger" class=" col-md-6" ><i class="fa fa-trash fa-2x"></i></a></button>
+                    </div>
+                    <div>
+                        <input id="input" style="width: 100%; box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */" placeholder="New link" type="text" class="form-control">
+                    </div>
+                    <div>
+                        <input id="input2" style="width: 100%; box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */" placeholder="Name" type="text" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div id="blocksOfFooter" class="col-sm-3">
+                <h4 class="title-widget">Your notes</h4><div>
+                <textarea id="textAreaFooter" placeholder="Type your note in this area: " style="font-family: 'Coming Soon', cursive; font-size: 25px; background-color:#919497; width: 100%; border-radius: 5px; box-shadow: 0 0 10px rgba(0,0,0,0.5);" name="Text1" id="fieldForText" cols="15" rows="4"></textarea>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row text-center" id="creatorText"> Created, developed and designed by Khanas Vasyl</div>
+    </div>
+</footer>
+
+
+    <script>
+        
+     ///////////////////////////////////////////////////////////DISPLAY-INFO ++ //////////////////////////////////////////////////////////        
+        var idFriend = localStorage.getItem("idFriendPageVisit");
+    
+        var str1 = "http://localhost:8080/information/public/select/";
+            var str2 = idFriend;
+                var str3 = str1.concat(str2);
+        
+         $.ajax({
+            url: str3,
+            type: "POST",
+            'contentType' : "application/json",
+            success: function(data) {
+                $("#countryCity").append(data.city + " " + data.country),
+                $("#fewWords").append(data.fewWords),
+                $("#Age").append(data.age + " years old, " + data.gender),
+                $("#number").append(data.number)
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });
+        
+///////////////////////////////////////////////////////// MAIN PHOTO //////////////////////////////////////////////////////////////////
+                                var avatarIdRequest = {
+                                     id : localStorage.getItem("idFriendPageVisit")
+                                }
+                                 
+                                 $.ajax({
+                                    url: "http://localhost:8080/avatar/select",
+                                    type: "POST",
+                                    headers: {
+                                        'Authorize' : "Bearer " + localStorage.getItem('token')
+                                    },
+                                    'contentType' : "application/json",
+                                    "dataType": "json",
+                                    'data': JSON.stringify(avatarIdRequest),
+                                    success: function(data) {
+                                        if(data != null){
+                                            var str1PhotoSrc = "img/";
+                                            var str2PhotoSrc = data.photo;
+                                            var str3PhotoSrc = str1PhotoSrc.concat(str2PhotoSrc);
+                                            $("#MainPhoto").attr("src", str3PhotoSrc);
+                                            $("#miniPhoto").attr("src", str3PhotoSrc);
+                                        }
+                                    },
+                                    error: function(error) {
+                                        console.log(error);
+                                    }
+                                });
+     
+///////////////////////////////////////////////////////////DISPLAY-LINK ++ /////////////////////////////////////////////////////////////////     
+          var linkIdRequest = {
+              "id": localStorage.getItem("idFriendPageVisit")
+         }
+         
+          $.ajax({
+            url: "http://localhost:8080/link/selectOne",
+            type: "POST",
+            headers: {
+                Authorize : "Bearer " + localStorage.getItem('token')
+            },
+                'contentType' : "application/json",
+            "dataType": "json",
+            'data': JSON.stringify(linkIdRequest),
+            success: function(data) {
+                $("#facebook").attr("href", data.facebookLink);
+                $("#twitter").attr("href", data.twitterLink);
+                $("#linkedin").attr("href", data.linkedinLink);
+                $("#vk").attr("href", data.vkLink);      
+            }, 
+            error: function(error) {
+                console.log(error);
+            }
+        });
+         
+///////////////////////////////////////////////////////////DISPLAY-WORK ++ /////////////////////////////////////////////////////////////////    
+          var workIdRequest = {
+              "id": localStorage.getItem("idFriendPageVisit")
+         }
+         
+          $.ajax({
+            url: "http://localhost:8080/work/select",
+            type: "POST",
+            headers: {
+                'Authorize' : "Bearer " + localStorage.getItem('token')
+            },
+            'contentType' : "application/json",
+            "dataType": "json",
+            'data': JSON.stringify(workIdRequest),
+            success: function(data) {
+                $("#place1").append(data.place1);
+                $("#time1").append(data.time1);
+                $("#few1").append(data.few1);
+                $("#place2").append(data.place2);
+                $("#time2").append(data.time2);
+                $("#few2").append(data.few2);      
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });
+       
+///////////////////////////////////////////////////////////DISPLAY-STUDY ++ ////////////////////////////////////////////////////////////////         
+         var studyIdRequest = {
+              "id": localStorage.getItem("idFriendPageVisit")
+         }
+         
+         $.ajax({
+            url: "http://localhost:8080/study/select",
+            type: "POST",
+            headers: {
+                'Authorize' : "Bearer " + localStorage.getItem('token')
+            },
+            'contentType' : "application/json",
+            "dataType": "json",
+            'data': JSON.stringify(studyIdRequest),
+            success: function(data) {
+                $("#splace1").append(data.place1);
+                $("#stime1").append(data.time1);
+                $("#sfew1").append(data.few1);
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });
+ 
+      /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////DISPLAY-NOTE ++ ///////////////////////////////////////////////////////
+     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+     
+    var noteRequest = {
+        id: localStorage.getItem("idCurrentUser")
+    }
+
+    $.ajax({
+        url: "http://localhost:8080/note/selectOne",
+        type: "POST",
+        headers: {
+            'Authorize' : "Bearer " + localStorage.getItem('token'),
+        },
+        'contentType' : "application/json",
+        "dataType": "json",
+        'data': JSON.stringify(noteRequest),
+        success: function(data) {
+            $("#textAreaFooter").val(data.text);
+        },
+        error: function(error) {
+            console.log(error);
+        }
+    });
+
+///////////////////////////////////////////////////////////SAVE-NOTE ++ ///////////////////////////////////////////////////////////////////
+   
+    $("#textAreaFooter").focusout(function(){
+        
+        var note = {
+            text: $("#textAreaFooter").val(),
+            idUser: localStorage.getItem("idCurrentUser")
+        }
+           
+        var urlFirstPart = "http://localhost:8080/note/";
+        var urlSecondPart = localStorage.getItem("idCurrentUser");
+        var urlFull = urlFirstPart.concat(urlSecondPart);
+
+        $.ajax({
+            'url': urlFull,
+            'type': "PUT",
+            headers: {
+                'Authorize' : "Bearer " + localStorage.getItem('token'),
+            },
+            'contentType' : "application/json",
+            "dataType": "json",
+            'data': JSON.stringify(note),
+            'success': function(data) {
+                console.log(data);
+                $("#textAreaFooter").val(data.text);
+            },
+            'eror': function(error) {
+                alert("ERROR");
+            }
+        });
+
+///////////////////////////////////////////////////////////DISPLAY-NOTE-x2 ++ //////////////////////////////////////////////////////////////////
+        
+        var noteRequest = {
+            id: localStorage.getItem("idCurrentUser")
+        }
+
+        $.ajax({
+            url: "http://localhost:8080/note/selectOne",
+            type: "POST",
+            headers: {
+                'Authorize' : "Bearer " + localStorage.getItem('token')
+            },
+            'contentType' : "application/json",
+            "dataType": "json",
+            'data': JSON.stringify(noteRequest),
+            success: function(data) {
+                $("#textAreaFooter").val(data.text);
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });
+    });
+    
+///////////////////////////////////////////////////////////DISPLAY-BOOKMARKS ++ ////////////////////////////////////////////////////////////
+     var idCurrent = localStorage.getItem("idCurrentUser");
+     
+    var book = {
+       id: idCurrent
+    }
+
+    $.ajax({
+        url: "http://localhost:8080/bookmark/selectOne",
+        type: "POST",
+        headers: {
+            'Authorize' : "Bearer " + localStorage.getItem('token')
+        },
+        'contentType' : "application/json",
+        "dataType": "json",
+        'data': JSON.stringify(book),
+        success: function(data) {
+            for (var i = 0; i < data.length; i++) {
+                var element = document.createElement("a");
+                element.setAttribute('class', "aLink");
+                element.setAttribute('href', data[i].link);
+                element.appendChild(document.createTextNode(data[i].name));
+                document.getElementById('category').appendChild(element);
+            }
+        },
+        error: function(error) {
+            console.log(error);
+        }
+    });
+     
+///////////////////////////////////////////////////////////SAVE-BOOKMARK ++ ////////////////////////////////////////////////////////////////
+
+     
+    searchBtn.onclick = function() {
+        var idCurrent = localStorage.getItem("idCurrentUser");
+        var bookmark = {
+            link: $("#input").val(),
+            name: $("#input2").val(),
+            idUser: idCurrent
+        }
+
+        $.ajax({
+            'url': "http://localhost:8080/bookmark",
+            'type': "POST",
+            headers: {
+                'Authorize' : "Bearer " + localStorage.getItem('token')
+            },
+            'contentType' : "application/json",
+            "dataType": "json",
+            'data': JSON.stringify(bookmark),
+            success: function(data) {
+                console.log(data);
+                $(".aLink").remove();
+                 var book = {
+                       id: idCurrent
+                    }
+
+                    $.ajax({
+                        url: "http://localhost:8080/bookmark/selectOne",
+                        type: "POST",
+                        headers: {
+                            'Authorize' : "Bearer " + localStorage.getItem('token')
+                        },
+                        'contentType' : "application/json",
+                        "dataType": "json",
+                        'data': JSON.stringify(book),
+                        success: function(data) {
+                            for (var i = 0; i < data.length; i++) {
+                                var element = document.createElement("a");
+                                element.setAttribute('class', "aLink");
+                                element.setAttribute('href', data[i].link);
+                                element.appendChild(document.createTextNode(data[i].name));
+                                document.getElementById('category').appendChild(element);
+                            }
+                        },
+                        error: function(error) {
+                            console.log(error);
+                        }
+                    });
+                
+            },
+            'eror': function(error) {
+                alert("ERROR");
+            }
+        });
+
+
+
+    }
+    
+///////////////////////////////////////////////////////////DELETE-BOOKMARKS ++ /////////////////////////////////////////////////////////////
+
+    
+
+   $("#removeAllBtn").click(function(){
+       var idUser = localStorage.getItem("idCurrentUser");
+       
+       var deleteAll = {
+             id: idUser
+        }
+        $.ajax({
+            'url': "http://localhost:8080/bookmark/delete",
+            'type': "POST",
+             headers: {
+                'Authorize' : "Bearer " + localStorage.getItem('token')
+            },
+            'contentType' : "application/json",
+            "dataType": "json",
+            'data': JSON.stringify(deleteAll),
+            'eror': function(error) {
+                alert("ERROR");
+            }
+        });
+       $(".aLink").remove();
+    });
+     
+     
+///////////////////////////////////////////////////////////DISPLAY-USER-REGISTER ++ ////////////////////////////////////////////////////////
+    
+    var urlFirstPart = "http://localhost:8080/user/get/by/";
+        var urlSecondPart = localStorage.getItem("idFriendPageVisit");
+        var urlFull = urlFirstPart.concat(urlSecondPart);
+    
+    $.ajax({
+        url: urlFull,
+        type: "GET",
+        headers: {
+            'Authorize' : "Bearer " + localStorage.getItem('token'),
+        },
+        contentType : "application/json",
+        dataType: "json",
+        success: function(data) {
+            $("#FirstNameAndLastName").append("<h2 style='font-weight:bold'>" + data.lastName + " " + data.firstName + "</h2>");
+            $("#email").append(data.email);
+            $("#titleHeader").append(data.firstName + "'s Page");
+        },
+        'eror': function(error) {
+            alert("ERROR");
+        }
+    });
+
+           var urlFirstPart = "http://localhost:8080/user/get/by/";
+        var urlSecondPart = localStorage.getItem("idCurrentUser");
+        var urlFull = urlFirstPart.concat(urlSecondPart);
+    
+    $.ajax({
+        url: urlFull,
+        type: "GET",
+        headers: {
+            'Authorize' : "Bearer " + localStorage.getItem('token'),
+        },
+        contentType : "application/json",
+        dataType: "json",
+        success: function(data) {
+            $("#emailHeader").append(data.email);
+        },
+        'eror': function(error) {
+            alert("ERROR");
+        }
+    });
+
+        var avatarIdRequest = {
+             id : localStorage.getItem("idCurrentUser")
+        }
+
+         $.ajax({
+            url: "http://localhost:8080/avatar/select",
+            type: "POST",
+            headers: {
+                'Authorize' : "Bearer " + localStorage.getItem('token')
+            },
+            'contentType' : "application/json",
+            "dataType": "json",
+            'data': JSON.stringify(avatarIdRequest),
+            success: function(data) {
+                if(data != null){
+                    var str1PhotoSrc = "img/";
+                    var str2PhotoSrc = data.photo;
+                    var str3PhotoSrc = str1PhotoSrc.concat(str2PhotoSrc);
+                    $("#miniPhoto").attr("src", str3PhotoSrc);
+                }
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });
+        
+    </script>
+    
+    
+    
+    
+    
+    
+    </script>
+ 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script>
+        function setDate() {
+            // get current date
+            const now = new Date();
+            // get seconds, minutes and hours
+            var seconds = "0" + now.getSeconds();
+            var minutes = "0" + now.getMinutes();
+            var hours = "0" + now.getHours();
+
+            //change html clock time
+
+            document.getElementById('second').innerHTML = seconds.slice(-2);
+            document.getElementById('minute').innerHTML = minutes.slice(-2) + " : ";
+            document.getElementById('hour').innerHTML = hours.slice(-2) + " : ";
+        }
+
+        setInterval(setDate, 1000);
+
+        $(document).ready(function() {
+            $('.menu li:has(ul)').hover(function(e) {
+                e.preventDefault();
+                if ($(this).hasClass('activado')) {
+                    $(this).removeClass('activado');
+                    $(this).children('ul').slideUp();
+                } else {
+                    $('.menu li ul').slideUp();
+                    $('.menu li').removeClass('activado');
+                    $(this).addClass('activado');
+                    $(this).children('ul').slideDown();
+                }
+            });
+        });
+    </script>
+
+    <script>
+        try {
+            Typekit.load({
+                async: true
+            });
+        } catch (e) {}
+
+        $(function() {
+            function getParameterByName(name, url) {
+                if (!url) {
+                    url = window.location.href;
+                }
+                name = name.replace(/[\[\]]/g, "\\$&");
+                var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                    results = regex.exec(url);
+                if (!results) return null;
+                if (!results[2]) return '';
+                return decodeURIComponent(results[2].replace(/\+/g, " "));
+            }
+            if (getParameterByName('email') == "success") {
+                //make message permanent
+                // alert("Contact was made!\nWe will get back to you as soon as possible.");
+                document.getElementById("mailer").style.pointerEvents = "none";
+                document.getElementById("mailer").style.filter = "blur(2px)";
+                document.getElementById("contactwas").style.display = "block";
+                //clear url
+
+            }
+        });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

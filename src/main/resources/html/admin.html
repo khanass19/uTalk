@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/admin.css"> 
+    
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script> 
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+   
+    <title>AdminPage</title>
+</head>
+<body>
+     
+     <h1 id="title">ADMINISTRATION PAGE</h1>
+     
+      <section>
+  <h1>Registered Users</h1>
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th class="upperCase">id</th>
+          <th class="upperCase">firstName</th>
+          <th class="upperCase">lastName</th>
+          <th class="upperCase">email</th>
+          <th class="upperCase">password</th>
+          
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody id="firstTable">
+      
+      </tbody>
+    </table>
+  </div>
+  <div style="margin-top: 2%;">
+     <label>Fields for blocking users !</label>
+      <input id="inputBLockUser" type="number" placeholder="user's id:">
+      <button id="blockBtn" type="button">Block user!</button>
+      
+    
+          
+          <script>
+                  $.ajax({
+                      url:"http://localhost:8080/ban",
+                      type:"GET",
+                        headers: {
+                            'Authorize' : "Bearer " + localStorage.getItem('token')
+                        },
+                      contentType:"application/json",
+                      success:function(data){
+                        for (var i = 0; i < data.length; i++) {
+                          $("#fifthTable").append("<tr><th>" + data[i].id + "</th><th>" + data[i].idUser + "</th></tr>");
+                        }
+                      },
+                      error:function(error){
+                        console.log(error);
+                      }
+                    });
+              
+              
+             blockBtn.onclick = function(){ 
+                 
+                  var banRequest = {
+                      idUser: $("#inputBLockUser").val() 
+                  }
+                
+                  var str1 = "http://localhost:8080/ban/"
+                  var str2 = $("#inputBLockUser").val() 
+                  var str3 = str1.concat(str2);
+                        
+                  
+                   $.ajax({
+                  url: str3,
+                  type:"PUT",
+                  headers: {
+                      'Authorize' : "Bearer " + localStorage.getItem('token')
+                  },
+                  contentType:"application/json",
+                 "dataType": "json",
+                 'data': JSON.stringify(banRequest),   
+                  success:function(data){
+                    $.ajax({
+                          url:"http://localhost:8080/ban",
+                          type:"GET",
+                            headers: {
+                                'Authorize' : "Bearer " + localStorage.getItem('token')
+                            },
+                          contentType:"application/json",
+                          success:function(data){
+                              $("th").remove();
+                            for (var i = 0; i < data.length; i++) {
+                              $("#fifthTable").append("<tr><th>" + data[i].id + "</th><th>" + data[i].idUser + "</th></tr>");
+                            }
+                          },
+                          error:function(error){
+                            console.log(error);
+                          }
+                        });
+                  },
+                  error:function(error){
+                    console.log(error);
+                  }
+                });
+                    
+
+        }
+      
+      
+      </script>
+      
+      
+      
+  </div>
+  <div>
+      <label>Fields for unblocking users !</label>
+      <input id="inputBLockUser02" type="number" placeholder="user's id to unblock:">
+      <button id="unblockBtn" type="button">UnBlock user!</button>
+      
+      <script>
+      
+       unblockBtn.onclick = function(){ 
+                 
+                  var banRequest = {
+                      id: $("#inputBLockUser02").val() 
+                  }
+                $.ajax({
+                  url: "http://localhost:8080/ban/delete",
+                  type:"DELETE",
+                  headers: {
+                      'Authorize' : "Bearer " + localStorage.getItem('token')
+                  },
+                  contentType:"application/json",
+                 "dataType": "json",
+                 'data': JSON.stringify(banRequest),           
+                  error:function(error){
+                    console.log(error);
+                  }
+                });
+           
+              $.ajax({
+                  url:"http://localhost:8080/ban",
+                  type:"GET",
+                    headers: {
+                        'Authorize' : "Bearer " + localStorage.getItem('token')
+                    },
+                  contentType:"application/json",
+                  success:function(data){
+                    $("th").remove();
+                    for (var i = 0; i < data.length; i++) {
+                      $("#fifthTable").append("<tr><th>" + data[i].id + "</th><th>" + data[i].idUser + "</th></tr>");
+                    }
+                  },
+                  error:function(error){
+                    console.log(error);
+                  }
+                });
+        }
+      
+      
+      </script>
+      
+      
+      
+  </div>
+  
+</section>
+
+
+ <section>
+  <h1>Blocked users</h1>
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th class="upperCase">№</th>
+          <th class="upperCase">idUser</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody id="fifthTable">
+      
+      </tbody>
+    </table>
+  </div>
+  
+</section>
+
+
+
+
+<section>
+  <h1>Information about users</h1>
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th class="upperCase">id</th>
+          <th class="upperCase">country</th>
+          <th class="upperCase">city</th>
+          <th class="upperCase">number</th>
+          <th class="upperCase">fewWords</th>
+          <th class="upperCase">age</th>
+          <th class="upperCase">gender</th>
+          <th class="upperCase">idUser</th>
+          
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody id="secondTable">
+      
+      </tbody>
+    </table>
+  </div>  
+  
+</section>
+
+<section>
+  <h1>Conversations</h1>
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th class="upperCase">id</th>
+          <th class="upperCase">authorId</th>
+          <th class="upperCase">receiverId</th> 
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody id="thirdTable">
+      
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h1>Messages</h1>
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th class="upperCase">id</th>
+          <th class="upperCase">text</th>
+          <th class="upperCase">authorId</th>
+          <th class="upperCase">conversationId</th> 
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody id="fourthTable">
+      
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<div id="bg">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+
+
+
+
+
+
+<script>
+  
+    $.ajax({
+      url:"http://localhost:8080/user",
+      type:"GET",
+        headers: {
+            'Authorize' : "Bearer " + localStorage.getItem('token')
+        },
+      contentType:"application/json",
+      success:function(data){
+        for (var i = 0; i < data.length; i++) {
+          $("#firstTable").append("<tr><th>" + data[i].id + "</th><th>" + data[i].firstName + "</th><th>" + data[i].lastName + "</th><th>" + data[i].email + "</th><th>" + data[i].password + " " + "</th></tr>");
+        }
+      },
+      error:function(error){
+        console.log(error);
+      }
+    });
+         
+         $.ajax({
+      url:"http://localhost:8080/information",
+      type:"GET",
+        headers: {
+            'Authorize' : "Bearer " + localStorage.getItem('token')
+        },
+      contentType:"application/json",
+      success:function(data){
+        for (var i = 0; i < data.length; i++) {
+          $("#secondTable").append("<tr><th>" + data[i].id + "</th><th>" + data[i].country + "</th><th>" + data[i].city + "</th><th>" + data[i].number + "</th><th style='width:30px'>" + data[i].fewWords + "</th><th>" + data[i].age + " " + "</th><th>" + data[i].gender + " " + "</th><th>" + data[i].userResponse.id + " " + "</th></tr>");
+        }
+      },
+      error:function(error){
+        console.log(error);
+      }
+    });    
+   
+           $.ajax({
+      url:"http://localhost:8080/besida",
+      type:"GET",
+        headers: {
+            'Authorize' : "Bearer " + localStorage.getItem('token')
+        },
+      contentType:"application/json",
+      success:function(data){
+        for (var i = 0; i < data.length; i++) {
+          $("#thirdTable").append("<tr><th>" + data[i].id + "</th><th>" + data[i].authorId + "</th><th>" + data[i].receiverId + "</th></tr>");
+        }
+      },
+      error:function(error){
+        console.log(error);
+      }
+    });    
+   
+    
+           $.ajax({
+      url:"http://localhost:8080/sms",
+      type:"GET",
+        headers: {
+            'Authorize' : "Bearer " + localStorage.getItem('token')
+        },
+      contentType:"application/json",
+      success:function(data){
+        for (var i = 0; i < data.length; i++) {
+          $("#fourthTable").append("<tr><th>" + data[i].id + "</th><th>" + data[i].text + "</th><th>" + data[i].authorId + "</th><th>" + data[i].conversationId + "</th></tr>");
+        }
+      },
+      error:function(error){
+        console.log(error);
+      }
+    });    
+   
+    
+        
+    </script>
+    
+    <script>
+    $(window).on("load resize ", function() {
+  var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
+  $('.tbl-header').css({'padding-right':scrollWidth});
+}).resize();</script>
+</body>
+</html>
