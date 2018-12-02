@@ -11,11 +11,11 @@ public interface UserService {
     List<UserResponse> getAll();
     UserResponse register(UserRequest userRequest) throws IOException;
 
-    void delete(Long id);
+    void deleteById(Long id);
     UserResponse update(Long id,UserRequest userRequest);
     List<UserResponse> filter(UserSpecRequest userSpecRequest);
     String login(LoginRequest loginRequest);
 
     UserResponse verifyForLogin(UserFindByEmailRequest userFindByEmailRequest);
-    UserResponse findOne(Long id);
+    UserResponse getOne(Long id);
 }

@@ -35,7 +35,7 @@ public class UserServiceImpl implements UserService {
     private TokenTool tokenTool;
 
     public String login(LoginRequest loginRequest) {
-        User user = userRepository.findOneByEmail(loginRequest.getLogin());
+        User user = userRepository.getOneByEmail(loginRequest.getLogin());
         if (user != null) {
             if (user.getPassword().equals(loginRequest.getPassword())) {
                 return tokenTool.createToken(user.getEmail(), user.getRole().name());
@@ -81,13 +81,13 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public UserResponse findOne(Long id) {
-        return new UserResponse(userRepository.findOne(id));
+    public UserResponse getOne(Long id) {
+        return new UserResponse(userRepository.getOne(id));
     }
 
     @Override
     public UserResponse update(Long id, UserRequest userRequest) {
-        User user = userRepository.findOne(id);
+        User user = userRepository.getOne(id);
         user.setFirstName(userRequest.getFirstName());
         user.setLastName(userRequest.getLastName());
         user.setEmail(userRequest.getEmail());
@@ -96,8 +96,8 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void delete(Long id) {
-        userRepository.delete(id);
+    public void deleteById(Long id) {
+        userRepository.deleteById(id);
     }
 
     @Override

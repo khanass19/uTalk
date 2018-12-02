@@ -9,8 +9,8 @@ public interface PlanService {
 
     List<PlanResponse> getAll();
     PlanResponse save(PlanRequest planRequest) throws IOException;
-    void delete(Long id);
+    void deleteById(Long id);
 
     List<PlanResponse> findAllById(PlanSpecRequest planSpecRequest);
-    void delete(PlanSpecRequest planSpecRequest);
+    void deleteById(PlanSpecRequest planSpecRequest);
 }

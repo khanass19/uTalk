@@ -1,11 +1,14 @@
 package com.example.project.service.serviceImpl;
 
+import com.example.project.controller.AvatarController;
 import com.example.project.dto.*;
 import com.example.project.entity.Avatar;
 import com.example.project.entity.User;
 import com.example.project.repository.AvatarRepository;
 import com.example.project.repository.UserRepository;
 import com.example.project.service.AvatarService;
+import com.example.project.service.PhotoService;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -14,6 +17,7 @@ import sun.misc.BASE64Decoder;
 import javax.transaction.Transactional;
 import java.io.*;
 import java.util.UUID;
+import java.util.logging.Logger;
 
 @Service
 public class AvatarServiceImpl implements AvatarService{
@@ -24,12 +28,16 @@ public class AvatarServiceImpl implements AvatarService{
     @Autowired
     private UserRepository userRepository;
 
+    @Autowired
+    private PhotoService photoService;
+
     private void saveFile(MultipartFile file) throws IOException {
-        File pathToFolder = new File("C:\\Users\\CodeBrain21\\Desktop\\final\\img");
+        final String PATH_TO_FILE = "C:\\Users\\User\\Desktop\\rep\\final\\img";
+        File pathToFolder = new File(PATH_TO_FILE);
         if(!pathToFolder.exists()){
             pathToFolder.mkdirs();
         }
-        File newFile = new File(pathToFolder + "/" + file.getOriginalFilename());
+        File newFile = new File(pathToFolder + "\\" + file.getOriginalFilename());
         OutputStream fos = new FileOutputStream(newFile);
         BufferedOutputStream bos = new BufferedOutputStream(fos);
         bos.write(file.getBytes(),0, file.getBytes().length);
@@ -58,6 +66,8 @@ public class AvatarServiceImpl implements AvatarService{
 
     @Override
     public AvatarResponse findAvatarForOneUser(AvatarIdRequest avatarIdRequest) {
+        System.out.println("Getting image from DB");
+        System.out.println("Image was found successfully");
         return new AvatarResponse(avatarRepository.findAv(avatarIdRequest.getId()));
     }
 

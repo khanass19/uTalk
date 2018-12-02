@@ -32,7 +32,7 @@ public class UserController {
     @DeleteMapping("/{id}")
     @PreAuthorize("hasAnyAuthority('ADMIN')")
     public void delete(@Valid @PathVariable Long id){
-        userService.delete(id);
+        userService.deleteById(id);
     }
 
     @PutMapping("/{id}")
@@ -50,7 +50,7 @@ public class UserController {
     @GetMapping("/get/by/{id}")
     @PreAuthorize("hasAnyAuthority('USER')")
     public UserResponse getOne(@Valid @PathVariable Long id) {
-        return userService.findOne(id);
+        return userService.getOne(id);
     }
 
 }

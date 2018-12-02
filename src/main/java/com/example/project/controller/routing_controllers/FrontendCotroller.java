@@ -1,15 +1,14 @@
-package com.example.project.controller.FrontendController;
+package com.example.project.controller.routing_controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-
-import java.io.IOException;
 
 @Controller
 public class FrontendCotroller {
-    @GetMapping("/page")
-    public String getStartPage() throws IOException {
+
+    @GetMapping("/public/page")
+    public String getStartPage() {
         return "/index.html";
     }
+
 }

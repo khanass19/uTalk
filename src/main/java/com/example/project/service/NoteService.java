@@ -9,7 +9,7 @@ public interface NoteService {
 
     List<NoteResponse> getAll();
     NoteResponse save(NoteRequest noteRequest) throws IOException;
-    void delete(Long id);
+    void deleteById(Long id);
     NoteResponse getOne(Long id);
     NoteResponse update(Long id, NoteRequest noteRequest);
 

@@ -47,7 +47,7 @@ public class BanServiceImpl implements BanService{
 
     @Override
     public void deleteOne(BanIdRequest banIdRequest) {
-            banRepository.delete(banIdRequest.getId());
+            banRepository.deleteById(banIdRequest.getId());
     }
 
     @Override

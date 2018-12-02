@@ -41,7 +41,7 @@ public class PlanController {
     @PutMapping("/delete")
     @PreAuthorize("hasAnyAuthority('USER')")
     public void delete(@Valid @RequestBody PlanSpecRequest planSpecRequest){
-        planService.delete(planSpecRequest);
+        planService.deleteById(planSpecRequest);
     }
 
 }

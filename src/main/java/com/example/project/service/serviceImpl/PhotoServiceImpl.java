@@ -56,11 +56,11 @@ public class PhotoServiceImpl implements PhotoService{
     }
 
     private  void saveFile(MultipartFile file) throws IOException {
-        File pathToFolder = new File("C:\\Users\\CodeBrain21\\Desktop\\final\\img");
+        File pathToFolder = new File("C:\\Users\\User\\Desktop\\rep\\final\\img");
         if(!pathToFolder.exists()){
             pathToFolder.mkdirs();
         }
-        File newFile = new File(pathToFolder + "/" + file.getOriginalFilename());
+        File newFile = new File(pathToFolder + "\\" + file.getOriginalFilename());
         OutputStream fos = new FileOutputStream(newFile);
         BufferedOutputStream bos = new BufferedOutputStream(fos);
         bos.write(file.getBytes(),0, file.getBytes().length);
@@ -70,7 +70,7 @@ public class PhotoServiceImpl implements PhotoService{
     @Override
     public void delete(PhotoSpecRequest photoSpecRequest) {
         List<Photo> photos = photoRepository.findPh(photoSpecRequest.getId());
-        photoRepository.delete(photos);
+        photoRepository.deleteAll(photos);
     }
 
 

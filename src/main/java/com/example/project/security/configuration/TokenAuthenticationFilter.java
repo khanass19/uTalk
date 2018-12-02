@@ -19,7 +19,10 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Enumeration;
+import java.util.List;
+import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -28,11 +31,26 @@ public class TokenAuthenticationFilter extends GenericFilterBean {
     @Value("${external.url.pattern:#{null}}")
     private String externalUrlPattern;
 
+    @Value("${external.static.images.pattern}")
+    private String imagesUrlPattern;
+
+    @Value("${external.static.font.pattern}")
+    private String fontAwesomeUrlPattern;
+
+    @Value("${external.static.css.pattern}")
+    private String cssUrlPattern;
+
+    @Value("${external.static.js.pattern}")
+    private String jsUrlPattern;
+
     @Value("${token.header}")
     private String tokenHeader;
 
     @Value("${token.uri.param:#{null}}")
     private String accessToken;
+
+    @Value("${external.login.pattern}")
+    private String loginUrl;
 
     @Autowired
     private TokenTool tokenTools;
@@ -44,14 +62,28 @@ public class TokenAuthenticationFilter extends GenericFilterBean {
 
         System.out.println("error in if where external - start of all");
 
-        if (externalUrlPattern != null && !externalUrlPattern.isEmpty()) {
-            Pattern p = Pattern.compile(externalUrlPattern);
-            Matcher m = p.matcher(((HttpServletRequest) request).getRequestURI());
-            if (m.find()) {
-                chain.doFilter(request, response);
-                return;
+        List<String> urlPatterns = Arrays.asList(externalUrlPattern, imagesUrlPattern, fontAwesomeUrlPattern,
+                cssUrlPattern, jsUrlPattern, loginUrl);
+        AtomicBoolean whetherNeedToExitMethod = new AtomicBoolean(false);
+        urlPatterns.forEach(x -> {
+            if (x != null && !x.isEmpty()) {
+                Pattern p = Pattern.compile(x);
+                String s = ((HttpServletRequest) request).getRequestURI();
+                Matcher m = p.matcher(s);
+                if(!whetherNeedToExitMethod.get()) {
+                    if (m.find()) {
+                        try {
+                            chain.doFilter(request, response);
+                            whetherNeedToExitMethod.set(true);
+                        } catch (IOException e) {
+                            System.out.println("IOException !!!!");
+                        } catch (ServletException e) {
+                            System.out.println("ServletException !!!!");
+                        }
+                    }
+                }
             }
-        }
+        });
 
         System.out.println("error in part before if-construction");
 
@@ -99,8 +131,8 @@ public class TokenAuthenticationFilter extends GenericFilterBean {
     }
 
     private void setErrorResponse(ServletResponse response, String msg) throws IOException {
-        ((HttpServletResponse) response).sendError(HttpServletResponse.SC_UNAUTHORIZED, "Access denied");
         ((HttpServletResponse) response).setHeader("WWW-Authenticate", "Bearer realm=\"Service\", error=\"invalid_grant\", error_description=\"" + msg + ".\"");
+        ((HttpServletResponse) response).sendError(HttpServletResponse.SC_UNAUTHORIZED, "Access denied");
     }
 
     private void traceSession(ServletRequest request) {

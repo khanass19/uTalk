@@ -41,7 +41,7 @@ public class ConversationController {
 	@GetMapping("/{id}")
 	@PreAuthorize("hasAnyAuthority('ADMIN')")
 	public ConversationResponseDTO getOne(@Valid @PathVariable Long id) {
-		return conversationService.findOne(id);
+		return conversationService.getOne(id);
 	}
 
 	@DeleteMapping("/delete")

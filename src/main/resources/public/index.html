@@ -1,13 +1,673 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Success start page</title>
-    <style>
-        body { background-color : forestgreen; font-weight: bold; color: white;}
-    </style>
+
+    <title>Start Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="Sticky Notes by Edmond Ko">
+    <meta name="author" content="Edmond Ko">
+
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css">
+    <link href="/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link href="/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Audiowide|Passion+One" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://use.fontawesome.com/07b0ce5d10.js"></script>
+
 </head>
+
 <body>
-HELLO MOTHERF*CKER !!!
+
+<div class="bg">
+    <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <a href="" class="navbar-brand"><img id = "emblem" class="emblem" src="/images/horseshoe.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active" style="padding-right:10px;">
+                    <a href="index.html" class="nav-link" style="font-size:25px; font-weight:bolder">START PAGE</a>
+                </li>
+                <li class="nav-item" style="font-size:25px; font-weight: normal, padding-right:10px;">
+                    <a href="#" class="nav-link" data-toggle="modal" data-target="#t_and_c_m2">INFORMATION</a>
+                </li>
+                <li class="nav-item" style="font-size:25px; font-weight: normal, padding-right:10px;">
+                    <a href="#" class="nav-link" data-toggle="modal" data-target="#t_and_c_m3">ADMIN</a>
+                </li>
+                <li class="nav-item " style=font-size:25px font-weight: normal>
+            </ul>
+            <form id="SearchWindow" class="form-inline my-2 my-lg-0">
+
+                <div id="containerForClock" class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="clock text-center">
+                                <span id="hour">24 : </span>
+                                <span id="minute">00 : </span>
+                                <span id="second">00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div id="LOG_IN_Window" class="form-inline">
+                <a href="#" class="btn btn-primary btn-lg" role="button" data-toggle="modal" data-target="#login-modal">LOG IN</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="modal fade" id="t_and_c_m2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">uTalk in details:</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                </div>
+                <div class="modal-body">
+
+                    <div style="display: flex; flex-direction:column; height: 500px;">
+                        <p><img src="/images/MainLogo.png" alt="main_logo" style="width: 40%; height: 45%; margin-left: 30%;">
+                        <div>
+                            uT (uTalk; Ukrainian: Ютолк, meaning YouTellSmbdSmth) is a Ukrainian-based online social networking service. It is available only in the English language, thougth it was created for native speakers of Ukraine. It is especially popular among English-speaking users. uTalk allows users to message each other privately, share and tag images, audio and video, and to make new friends. It is based in Lviv, Ukraine.
+                        </div>
+                    </div>
+                    <div class="modal-footer" style="margin-top: -10%;">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="t_and_c_m3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="width: 400px; margin: auto">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Admin entrance: </h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                </div>
+                <div class="modal-body">
+                    <div style="display: flex; flex-direction:column; height: 200px;">
+                        <div>
+                            <div class="row">
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <label>email</label>
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="form-group">
+                                        <input id="emailAdmin" type="text" class="form-control" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <label>password</label>
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="form-group">
+                                        <input id="passwordAdmin" type="text" class="form-control" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 col-lg-offset-5">
+                                    <button id="loginAdminBtn" type="button" class="addBtn form-control btn btn-primary">
+                                        Enter admin service
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer" style="margin-top: -10%;">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        ///////////////////////////////////////////////////////////LOGIN ADMIN ++ //////////////////////////////////////////////////////////////
+
+        $("#loginAdminBtn").click(function() {
+            if($("#emailAdmin").val() == "" ||  $("#passwordAdmin").val() == ""){
+                alert("Fill in all fields, please");
+            }
+            if($("#emailAdmin").val() == ""){
+                document.getElementById("emailAdmin").style.boxShadow = "0 0px 10px 3px #FF1F00";
+            } else {
+                document.getElementById("emailAdmin").style.boxShadow = "0 0px 0px 0px #FF1F00";
+            }
+
+            if($("#passwordAdmin").val() == ""){
+                document.getElementById("passwordAdmin").style.boxShadow = "0 0px 10px 3px #FF1F00";
+            } else {
+                document.getElementById("passwordAdmin").style.boxShadow = "0 0px 0px 0px #FF1F00";
+            }
+
+            var LoginAdminRequest = {
+                login: $("#emailAdmin").val(),
+                password: $("#passwordAdmin").val()
+            };
+
+            $.ajax({
+                url: "/public/login",
+                type: "POST",
+                contentType: "application/json",
+                data: JSON.stringify(LoginAdminRequest),
+                success: function(data) {
+                    localStorage.setItem('token', data);
+                    alert("token ADMIN stored in LocalStorage successfully");
+
+                    var userFindByEmailRequest = {
+                        login: $("#emailAdmin").val(),
+                        password: $("#passwordAdmin").val()
+                    }
+
+                    $.ajax({
+                        url: "http://localhost:8080/public/verify/getid",
+                        type: "POST",
+                        contentType: "application/json",
+                        data: JSON.stringify(userFindByEmailRequest),
+                        success: function(data) {
+                            var idCurrentAdmin = data.id;
+                            localStorage.setItem('idCurrentAdmin', idCurrentAdmin);
+                            alert("idCurrentAdmin stored into localStorage successfully");
+                            window.open('admin.html','_self',false);
+                        },
+                        error: function(error) {
+                            alert("-");
+                        }
+                    });
+                },
+                error: function(error) {
+                    alert("Input date is incorrect !");
+                }
+            });
+        });
+
+
+        ///////////////////////////////////////////////////////////LOGIN-END////////////////////////////////////////////////////////////////////////
+
+
+
+    </script>
+
+
+
+    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none; color:black;">
+        <div class="modal-dialog">
+            <div class="modal-content" style="background-color: #FFFFFF">
+                <div class="modal-header" align="center">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                    </button>
+                </div>
+
+                <div id="div-forms"><h2 style="text-align: center; background-color: #0162A6; color: #fff; box-shadow: 0px 0px 5px 2px #0162A6; font-family: 'Anton', sans-serif; margin-bottom:1%; margin-top: 3%; font-size: 40px;">L O G I N</h2>
+                    <form id="login-form">
+                        <div class="modal-body">
+                            <div id="div-login-msg">
+                                <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
+                            </div>
+                            <input id="login_email" class="form-control" type="email" placeholder="E-mail:" required >
+                            <input id="login_password" class="form-control" type="password" placeholder="Password:" required style="margin-top: 1%;">
+                            <div class="checkbox">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <div>
+
+                                <button id="buttonLogin" style="cursor: pointer;"><a class="buttonLogin"><i class="fa fa-sign-in fa-3x" aria-hidden="true"></i></a></button>
+
+                            </div>
+                            <div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" style="display: flex;">
+        <img id="logo1" src="/images/ScreenShotOfProfileMain.png" alt="">
+        <div id="registrationLogin" class="row">
+            <div class="col-xs-12 col-sm-10 col-md-9 col-sm-offset-2 col-md-offset-3">
+                <form role="form">
+                    <h2>Please Sign Up <small>We are really grateful for your true choise.</small></h2>
+                    <hr class="colorgraph">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <input required type="text" name="first_name" id="firstName" class="form-control input-lg" placeholder="First Name" tabindex="1">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                            <div class="form-group">
+                                <input required type="text" name="last_name" id="lastName" class="form-control input-lg" placeholder="Last Name" tabindex="2">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input required type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address" tabindex="4">
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-12">
+                            <div class="form-group">
+                                <input required type="password" name="password" id="password" class="form-control input-lg" placeholder="Password" tabindex="5">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="agreeText" style="margin-left: auto;" class="col-xs-12 col-sm-12 col-md-12">
+                            By clicking <strong class="label label-primary">Register</strong>, you agree to the <a href="#" data-toggle="modal" data-target="#t_and_c_m">Terms and Conditions</a> set out by this site, including our Cookie Use.
+                        </div>
+                    </div>
+                    <br>
+                    <div class="colorgraph">
+                        <br>
+                        <div class="row">
+                            <div class="col-xs-12 col-md-12"><button id="buttonRegister" type="button" style="width:100%;"><input type="button" value="Register" class="btn btn-success btn-block btn-lg" tabindex="7"></button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="t_and_c_m" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Terms and Conditions</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                </div>
+                <div class="modal-body">
+                    <p>2.1. These Terms of Use of the site "UTalK" (hereinafter - the Rules) are developed by the Site Administration and determine the conditions for the use and development of the Site, as well as the rights and obligations of its users and administration. The rules also apply to relations relating to the rights and interests of third parties who are not users of the Site, but whose rights and interests may be violated as a result of user actions of the Site.</p>
+                    <p>2.2. These Rules are a legally binding agreement between the User and the Site Administration, which aims to provide the Site Administration with access to the Site and its functionality. In addition to these Rules, an agreement between the User and the Site Administration includes all special documents governing access to the use of a separate functional site (including its unprotected data and commands) located in the relevant sections of the website to the Internet.</p>
+                    <p>2.3. The User is obligated to fully familiarize himself with these Rules before registering on the Site. Registration of the User on the Site means complete and unconditional acceptance by the User of these Rules in accordance with Art. 438 of the Civil Code of the Russian Federation.</p>
+                    <p>2.4. These Rules may be modified and / or supplemented by the Administration of the Website unilaterally without a special notice. These Rules are an open and publicly available document. The current version of the Rules is available online at http://vk.com/terms. The site administration recommends that users regularly review the Terms and Conditions for their changes and / or additions. Continued use of the Site by the user after making amendments and / or additions to the current Rules means acceptance and consent of the User with such changes and / or additions.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="underFooter">
+        <div class="container">
+            <div class="row">
+                <div id="TextAreaUnderFooter" class=" col-md-6">
+                    <div id="text1">
+                        <h2>Get started now!</h2>
+                        <h4>
+                            <p> Join the social service, where you'll be able to chat with other people without no limits, no advertisements.</p>
+                        </h4>
+                    </div>
+                    <ul class="text-black tmargin40">
+                        <li><span class="glyphicon glyphicon-cog"></span> Comfortable user-interface </li>
+                        <li><span class="glyphicon glyphicon-cog"></span> Available on mobile phones</li>
+                        <li><span class="glyphicon glyphicon-cog"></span> We excel in Web and Mobile Responsive Development</li>
+                    </ul>
+                    <a href="" class="btn btn-default btn-round tmargin30">Read More</a>
+                </div>
+                <div id class="col-md-6">
+                    <img id="Earth" src="/images/main-qimg-0102f6e770d2ce1f45bd7066524b8f70.png" alt="Socail Network">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer id="footer-Section">
+    <div class="footer-top-layout">
+        <div class="container">
+            <div class="row">
+                <div class="OurBlog" style="margin: auto;">
+                    <h4>UTalk</h4>
+                    <p>Web Service is still under development. Some functions may work incorrect. But we'll try to fix such problems.</p>
+                    <div class="post-blog-date">dd.mm.yy</div>
+                </div>
+                <div class="col-md-12 col-lg-8 col-lg-offset-2" style="display: flex; margin: auto; margin-top: 2%;">
+                    <div class="col-sm-4">
+                        <div class="footer-col-item">
+                            <h4>Our location</h4>
+                            <address>
+                                Ukraine, Lviv<br>
+                                Mykolaychuka St.
+                            </address>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-md-6">
+                        <div class="footer-col-item">
+                            <h4>Contact Us</h4>
+                            <div class="item-contact"><a href="https://www.linkedin.com/in/vasyl-khanas-6946b2156/"><span class="link-id">Linkedin</span>:<span >https://www.linkedin.com/in/vasyl-khanas-6946b2156/</span></a> <a href="tel:630-839.2006"><span class="link-id">G-mail</span>:<span>vasylkhanas1998@gmail.com</span></a><a href="vasylkhanas1998@gmail.com"></a></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-md-4">
+                        <div class="footer-col-item">
+                            <h4>Go to registration form</h4>
+                            <form class="signUpNewsletter" action="" method="get" style="margin-left: -25%;">
+                                <span id="scrollToTop" class="arrow">UP</span>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom-layout">
+        <div style="background-color: #1E2121; color: white; font-size: 12px;">Designed, created and developed by Vasyl Khanas</div>
+    </div>
+</footer>
+
+<script>
+
+
+
+    ///////////////////////////////////////////////////////////LOGIN USER/////////////////////////////////////////////////////////////////////
+
+    $("#buttonLogin").click(function() {
+
+
+        var LoginRequest = {
+            login: $("#login_email").val(),
+            password: $("#login_password").val()
+        };
+
+
+
+        $.ajax({
+            url: "http://localhost:8080/public/login",
+            type: "POST",
+            contentType: "application/json",
+            data: JSON.stringify(LoginRequest),
+            success: function(data) {
+                localStorage.setItem('token', data);
+                alert("token stored in LocalStorage successfully");
+                var userFindByEmailRequest = {
+                    login: $("#login_email").val(),
+                    password: $("#login_password").val()
+                }
+
+                $.ajax({
+                    url: "http://localhost:8080/public/verify/getid",
+                    type: "POST",
+                    contentType: "application/json",
+                    data: JSON.stringify(userFindByEmailRequest),
+                    success: function(data) {
+                        var idCurrentUser = data.id;
+                        var emailCurrent = data.email;
+
+
+                        localStorage.setItem('idCurrentUser', idCurrentUser);
+
+
+                        alert("id stored into localStorage successfully");
+                        localStorage.setItem('emailCurrentUser', emailCurrent);
+                        alert("email stored into localStorage successfully");
+                        var surnameCurrent = data.lastName;
+                        localStorage.setItem('surnameCurrentUser', surnameCurrent);
+                        alert("email stored into localStorage successfully");
+                        var banIdSelect = {
+                            id: localStorage.getItem('idCurrentUser')
+                        }
+                        $.ajax({
+                            url:"http://localhost:8080/ban/public/select",
+                            type:"POST",
+                            contentType:"application/json",
+                            data: JSON.stringify(banIdSelect),
+                            success:function(data){
+                                if(data.length != 0){
+                                    alert("You have been blocked by administrator ! Sorry.");
+                                } else {
+                                    window.open('Settings_Of_Page.html','_self',false);
+                                }
+                            },
+                            error:function(error){
+                                window.open('Settings_Of_Page.html','_self',false);
+                                console.log(error);
+                            }
+                        });
+                    },
+                    error: function(error) {
+                        alert("-");
+                    }
+                });
+            },
+            error: function(error) {
+                alert("-");
+            }
+        });
+    });
+
+    ///////////////////////////////////////////////////////////LOGIN-END////////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////REGISTRATION ++ /////////////////////////////////////////////////////////////////
+
+    $("#buttonRegister").click(function() {
+        if($("#firstName").val() == "" ||  $("#lastName").val() == "" ||  $("#email").val() == "" ||  $("#password").val() == ""){
+            alert("Fill in all fields, please");
+            if($("#firstName").val() == ""){
+                document.getElementById("firstName").style.boxShadow = "0 0px 10px 3px #FF1F00";
+            } else {
+                document.getElementById("firstName").style.boxShadow = "0 0px 0px 0px #FF1F00";
+            }
+
+            if($("#lastName").val() == ""){
+                document.getElementById("lastName").style.boxShadow = "0 0px 10px 3px #FF1F00";
+            } else {
+                document.getElementById("lastName").style.boxShadow = "0 0px 0px 0px #FF1F00";
+            }
+
+            if($("#email").val() == ""){
+                document.getElementById("email").style.boxShadow = "0 0px 10px 3px #FF1F00";
+            } else {
+                document.getElementById("email").style.boxShadow = "0 0px 0px 0px #FF1F00";
+            }
+
+            if($("#password").val() == ""){
+                document.getElementById("password").style.boxShadow = "0 0px 10px 3px #FF1F00";
+            } else {
+                document.getElementById("password").style.boxShadow = "0 0px 0px 0px #FF1F00";
+            }
+            return;
+        } else if($("#firstName").val().length < 4 ||  $("#lastName").val().lendth < 4 ||  $("#email").val().length < 4 ||  $("#password").val().length < 4){
+            alert("Level of security of your input data is rather low ! Please, fill in more secure data.");
+            return;
+        } else {
+            var user = {
+                firstName: ($("#firstName").val()[0].toUpperCase() + $("#firstName").val().slice(1)),
+                lastName: $("#lastName").val()[0].toUpperCase() + $("#lastName").val().slice(1),
+                email: $("#email").val(),
+                password: $("#password").val(),
+                role: "USER"
+            };
+
+            $.ajax({
+                url: "http://localhost:8080/public/register",
+                type: "POST",
+                contentType: "application/json",
+                data: JSON.stringify(user),
+                success: function(data) {
+                    alert("Success");
+
+                    var elements = document.getElementsByTagName("input");
+                    for (var ii=0; ii < elements.length; ii++) {
+                        if (elements[ii].value.length != 0) {
+                            elements[ii].value = "";
+                        }
+                    }
+                },
+                error: function(error) {
+                    alert("Input is incorrect/ user with such login/password already exists !");
+                }
+            });
+
+
+
+
+
+
+        }
+    });
+
+
+    ///////////////////////////////////////////////////////////REGISTRATION-END/////////////////////////////////////////////////////////////////
+</script>
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+<script>
+    $(function() {
+
+        var $formLogin = $('#login-form');
+        var $formLost = $('#lost-form');
+        var $formRegister = $('#register-form');
+        var $divForms = $('#div-forms');
+        var $modalAnimateTime = 300;
+        var $msgAnimateTime = 150;
+        var $msgShowTime = 2000;
+
+        $("form").submit(function() {
+            switch (this.id) {
+                case "register-form":
+                    var $rg_username = $('#register_username').val();
+                    var $rg_email = $('#register_email').val();
+                    var $rg_password = $('#register_password').val();
+                    if ($rg_username == "ERROR") {
+                        msgChange($('#div-register-msg'), $('#icon-register-msg'), $('#text-register-msg'), "error", "glyphicon-remove", "Register error");
+                    } else {
+                        msgChange($('#div-register-msg'), $('#icon-register-msg'), $('#text-register-msg'), "success", "glyphicon-ok", "Register OK");
+                    }
+                    return false;
+                    break;
+                default:
+                    return false;
+            }
+            return false;
+        });
+
+
+        $('#register_login_btn').click(function() {
+            modalAnimate($formRegister, $formLogin);
+        });
+        $('#login_lost_btn').click(function() {
+            modalAnimate($formLogin, $formLost);
+        });
+        $('#lost_login_btn').click(function() {
+            modalAnimate($formLost, $formLogin);
+        });
+        $('#lost_register_btn').click(function() {
+            modalAnimate($formLost, $formRegister);
+        });
+        $('#register_lost_btn').click(function() {
+            modalAnimate($formRegister, $formLost);
+        });
+
+        function modalAnimate($oldForm, $newForm) {
+            var $oldH = $oldForm.height();
+            var $newH = $newForm.height();
+            $divForms.css("height", $oldH);
+            $oldForm.fadeToggle($modalAnimateTime, function() {
+                $divForms.animate({
+                    height: $newH
+                }, $modalAnimateTime, function() {
+                    $newForm.fadeToggle($modalAnimateTime);
+                });
+            });
+        }
+
+        function msgFade($msgId, $msgText) {
+            $msgId.fadeOut($msgAnimateTime, function() {
+                $(this).text($msgText).fadeIn($msgAnimateTime);
+            });
+        }
+
+        function msgChange($divTag, $iconTag, $textTag, $divClass, $iconClass, $msgText) {
+            var $msgOld = $divTag.text();
+            msgFade($textTag, $msgText);
+            $divTag.addClass($divClass);
+            $iconTag.removeClass("glyphicon-chevron-right");
+            $iconTag.addClass($iconClass + " " + $divClass);
+            setTimeout(function() {
+                msgFade($textTag, $msgOld);
+                $divTag.removeClass($divClass);
+                $iconTag.addClass("glyphicon-chevron-right");
+                $iconTag.removeClass($iconClass + " " + $divClass);
+            }, $msgShowTime);
+        }
+    });
+</script>
+
+
+
+
+<script>
+    function setDate() {
+        // get current date
+        const now = new Date();
+        // get seconds, minutes and hours
+        var seconds = "0" + now.getSeconds();
+        var minutes = "0" + now.getMinutes();
+        var hours = "0" + now.getHours();
+
+        //change html clock time
+
+        document.getElementById('second').innerHTML = seconds.slice(-2);
+        document.getElementById('minute').innerHTML = minutes.slice(-2) + " : ";
+        document.getElementById('hour').innerHTML = hours.slice(-2) + " : ";
+    }
+
+    setInterval(setDate, 1000);
+
+    $(document).ready(function() {
+        $('.menu li:has(ul)').hover(function(e) {
+            e.preventDefault();
+            if ($(this).hasClass('activado')) {
+                $(this).removeClass('activado');
+                $(this).children('ul').slideUp();
+            } else {
+                $('.menu li ul').slideUp();
+                $('.menu li').removeClass('activado');
+                $(this).addClass('activado');
+                $(this).children('ul').slideDown();
+            }
+        });
+    });
+</script>
+<script>
+    $(function() {
+        $('#scrollToTop ').click(function() {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 'fast');
+
+            return false;
+        });
+    });
+</script>
+
 </body>
+
 </html>

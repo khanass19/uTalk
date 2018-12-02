@@ -43,7 +43,7 @@ public class BookmarkServiceImpl implements BookmarkService {
     @Override
     public void delete(BookmarkSpecRequest bookmarkSpecRequest) {
         List<Bookmark> bookmarks = bookmarkRepository.findBm(bookmarkSpecRequest.getId());
-        bookmarkRepository.delete(bookmarks);
+        bookmarkRepository.deleteAll(bookmarks);
     }
 
     @Override

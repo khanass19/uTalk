@@ -44,8 +44,8 @@ public class PlanServiceImpl implements PlanService {
     }
 
     @Override
-    public void delete(Long id) {
-        planRepository.delete(id);
+    public void deleteById(Long id) {
+        planRepository.deleteById(id);
     }
 
     @Override
@@ -59,9 +59,9 @@ public class PlanServiceImpl implements PlanService {
     }
 
     @Override
-    public void delete(PlanSpecRequest planSpecRequest) {
+    public void deleteById(PlanSpecRequest planSpecRequest) {
         List<Plan> plans = planRepository.findBm(planSpecRequest.getId());
-        planRepository.delete(plans);
+        planRepository.deleteAll(plans);
     }
 
 

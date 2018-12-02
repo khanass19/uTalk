@@ -33,8 +33,8 @@ public class ConversationServiceImpl implements ConversationService {
 	@Override
 	public ConversationResponseDTO save(ConversationRequestDTO conversationRequestDTO) {
 		Conversation conversation=new Conversation();
-		conversation.setAuthor(userRepository.findOne(conversationRequestDTO.getAuthorId()));
-		conversation.setReceiver(userRepository.findOne(conversationRequestDTO.getReceiverId()));
+		conversation.setAuthor(userRepository.getOne(conversationRequestDTO.getAuthorId()));
+		conversation.setReceiver(userRepository.getOne(conversationRequestDTO.getReceiverId()));
 		conversation.setMessage(messageRepository.findAll());
 		return new ConversationResponseDTO(conversationRepository.save(conversation));
 	}
@@ -51,7 +51,7 @@ public class ConversationServiceImpl implements ConversationService {
     }
 
 	@Override
-	public ConversationResponseDTO findOne(Long id){
+	public ConversationResponseDTO getOne(Long id){
 		return new ConversationResponseDTO(conversationRepository.getOne(id));
 	}
 
@@ -71,7 +71,7 @@ public class ConversationServiceImpl implements ConversationService {
 		Conversation conversation = conversationRepository.findCvForDelete(besidaDeleteRequest.getIdUser(),
 				besidaDeleteRequest.getIdOther());
 		List<Message> messages = messageRepository.findMsg(conversation.getId());
-		messageRepository.delete(messages);
+		messageRepository.deleteAll(messages);
 		conversationRepository.delete(conversation);
 	}
 }

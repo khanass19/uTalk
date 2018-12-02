@@ -17,7 +17,7 @@ import java.util.List;
 @Repository
 public interface UserRepository extends JpaRepository<User,Long>, JpaSpecificationExecutor<User>{
 
-    User findOneByEmail(String email);
+    User getOneByEmail(String email);
 
     @Query("select u from User u where u.email=:email OR u.password=:password")
     User findUs(@Param("email") String email, @Param("password") String password);

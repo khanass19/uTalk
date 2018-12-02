@@ -7,15 +7,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="css/VisitGalleryOfFriend.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="../static/css/VisitGalleryOfFriend.css">
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link href="css/font-awesome.css" rel=" stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Audiowide|Passion+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Glegoo|Teko" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
-    <link rel="stylesheet" href="css/addNote.css">
+    <link rel="stylesheet" href="../static/css/addNote.css">
     <script src="https://use.fontawesome.com/07b0ce5d10.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
      <link href="https://fonts.googleapis.com/css?family=Coming+Soon" rel="stylesheet">
@@ -25,7 +25,7 @@
 
     <div class="bg">
         <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-            <a class="navbar-brand"><img id = "emblem" class="emblem" src="images/horseshoe.png"></a>
+            <a class="navbar-brand"><img id = "emblem" class="emblem" src="/images/horseshoe.png"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -55,12 +55,12 @@
                 <div class="social-container">
                     <ul class="social-icons">
                         <li><a href="Friends.html" data-toggle="tooltip" title="Messanger"><i class="fa fa-envelope"></i></a></li>
-                        <li><a href="index.html" data-toggle="tooltip" title="Log out"><i class="fa fa-sign-out"></i></a></li>
+                        <li><a href="../index.html" data-toggle="tooltip" title="Log out"><i class="fa fa-sign-out"></i></a></li>
                     </ul>
                 </div>
                 <div class="admin-bar" style="font-size: 22px;">
                      <nav class="nav nav-inline">
-                        <a id="emailHeader" class="nav-link" style="color: darkgrey; font-style: italic; font-size: 14px"></a><img id="miniPhoto" src="images/user.gif"  class="img-fluid rounded-circle" id="photoHeader" style="width: 40px; height: 35px; padding-left: 2%">
+                        <a id="emailHeader" class="nav-link" style="color: darkgrey; font-style: italic; font-size: 14px"></a><img id="miniPhoto" src="/images/user.gif" class="img-fluid rounded-circle" id="photoHeader" style="width: 40px; height: 35px; padding-left: 2%">
                     </nav>
                 </div>
             </div>
@@ -167,7 +167,7 @@
                         </li>
                     </ul>
                     <li>
-                        <a href="index.html">
+                        <a href="../index.html">
                          <i class="fa fa-power-off fa-2x"></i>
                         <span class="nav-text" style="color: red; font-weight: bold ">Logout</span>
                     </a>
@@ -199,7 +199,7 @@
                         'data': JSON.stringify(photoSpecRequest),
                         success: function(data) {
                                 for (var i = 0; i < data.length; i++) {
-                                    $("#albom").append("<article class='image'><img src='img/" + data[i].url + "'><p>" + data[i].foot + "</p> </article>")
+                                    $("#albom").append("<article class='image'><img src=" + data[i].url + "'../static/img'><p>" + data[i].foot + "</p> </article>")
                                 }
                         },
                         error: function(error) {
